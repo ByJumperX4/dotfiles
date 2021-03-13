@@ -1,0 +1,6 @@
+#
+#   BLE.sh config file
+#
+
+# Disable auto-complete
+bleopt complete_auto_complete=
