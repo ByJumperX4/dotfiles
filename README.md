@@ -5,7 +5,7 @@ Warning : commented with ass and partially in frenglish (french + english). May 
 
 My setup :
 
-Distro : Bedrock Linux with Slackware 14.2 as main stratum, hijacked on Oracle Linux 8.3
+Distro : Funtoo
 
 CPUs : 2x Intel Xeon X5680
 
@@ -13,7 +13,7 @@ GPU : PNY nVidia GTX 1060 6GB
 
 GPU Driver : nVidia proprietary driver
 
-RAM : 108 GB of ram
+RAM : 108 GB of ram (DDR3)
 
 Locale : fr_BE.UTF-8
 
@@ -35,11 +35,11 @@ Browser : Ungoogled Chromium
 
 Editor : Vim & mousepad
 
+File manager : Dolphin
+
 Terminal Emulator : alacritty
 
-Shell : bash
-
-Some useful details you may want :
+Shell : bash with ble.sh
 
 Some useful commands to do in your terminal and shortcuts :
 
@@ -52,8 +52,6 @@ clr : alias to clear, less letters
 l : ls -l
 
 xephinit : runs your, xinitrc in xephir (useful to configure a wm)
-
-kerncomp : compiles and installs the linux kernel (you must be in the folder of the kernel's sources, only works if genkernel is installed)
 
 traceroute4ever : useful to test if your internet works
 
