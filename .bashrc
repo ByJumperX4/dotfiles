@@ -75,7 +75,7 @@ case "$1" in
     command mv --force -v $* /trash/
     ;;
     $*)
-    command mv -v $* /trash/$*$(head -c8 /dev/urandom)
+    command mv -v $* /trash/$*$RANDOM
 esac
 }
 
