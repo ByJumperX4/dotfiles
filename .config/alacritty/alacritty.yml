@@ -76,7 +76,7 @@ font:
   # The bold font face
   bold:
     family: "monospace"
-    # style: "Bold"
+    style: "Bold"
     # family: "Fira Code"
     # family: "Source Code Pro"
 

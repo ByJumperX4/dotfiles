@@ -29,7 +29,7 @@ Screens setup :
 
 1x horizontal 1920x1080 graphics tablet (in front of the middle screen, middle screen is higher so it doesn't mask the screen)
 
-DE : XFCE (i'll upload my config some day)
+DE/WM : dwm
 
 Browser : Ungoogled Chromium
 

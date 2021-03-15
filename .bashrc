@@ -38,7 +38,7 @@ export MAKEFLAGS='-j20 -l20'
 
 alias ls="ls -ah --color=auto"
 alias l="ls -l"
-alias xephinit="Xephyr -br -ac -noreset -screen 980x560 :1 & sleep 2 ; DISPLAY=:1 sh ~/.xinitrc"
+alias xephinit="Xephyr -br -ac -noreset -screen 2000x1000 :1 & sleep 2 ; DISPLAY=:1 sh ~/.xinitrc"
 alias x="exit"
 alias clr="clear"
 alias ta='tmux attach -t'
@@ -53,7 +53,7 @@ alias rrm='/bin/rm'
 alias gnous-nossh-dotfiles-push='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --mirror https://git.gnous.eu/By_JumperX4/dotfiles.git && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
 
 
-alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local}}'
+alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/dwm}'
 alias grep='grep --color=auto $@'
 alias egrep='egrep --color=auto $@'
 alias fgrep='fgrep --color=auto $@'
@@ -173,12 +173,19 @@ dotfiles() {
     for f in *.mp4; do ffmpeg -i "$f" "mp3/${f%.*}.mp3"; done
 }
 
-# Start XFCE
+# Start X11
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-        startxfce4
+        startx
 fi
 
 # ble.sh syntax highlighting & autocompletion (https://github.com/akinomyoga/ble.sh)
 
 . ~/.local/share/blesh/ble.sh
+
+# disable ble.sh if running in a tty
+
+if [ "$(echo $(tty)|rev|cut -c2-|rev)" = "/dev/tty" ]; then
+        ble-detach
+fi
+
