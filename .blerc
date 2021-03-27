@@ -4,3 +4,9 @@
 
 # Disable auto-complete
 bleopt complete_auto_complete=
+
+# disable ble.sh if running in a tty
+
+if [ "$(echo $(tty)|rev|cut -c2-|rev)" = "/dev/tty" ]; then
+        ble-detach
+fi

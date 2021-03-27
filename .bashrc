@@ -47,13 +47,14 @@ alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias dotfiles-push='dotfiles push && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
 alias rrm='/bin/rm'
+alias protontricks-flat='flatpak run --command=protontricks com.valvesoftware.Steam'
 
 # for git.gnous.eu if ssh is disabled temporarly
 
 alias gnous-nossh-dotfiles-push='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --mirror https://git.gnous.eu/By_JumperX4/dotfiles.git && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
 
 
-alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/{config.h,patches.h},.dwm}'
+alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/suckless}'
 alias grep='grep --color=auto $@'
 alias egrep='egrep --color=auto $@'
 alias fgrep='fgrep --color=auto $@'
@@ -183,9 +184,4 @@ fi
 
 . ~/.local/share/blesh/ble.sh
 
-# disable ble.sh if running in a tty
-
-if [ "$(echo $(tty)|rev|cut -c2-|rev)" = "/dev/tty" ]; then
-        ble-detach
-fi
 
