@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/byjumperx4/.config'
-let g:netrw_dirhist_2='/home/byjumperx4/.gvfs'
-let g:netrw_dirhist_3='/home/byjumperx4/.config/alacritty'
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/var/git/meta-repo/repos.conf'
+let g:netrw_dirhist_4='/var/git/meta-repo/kits/media-kit/licenses'
+let g:netrw_dirhist_3='/var/git/core-kit/.git'
+let g:netrw_dirhist_2='/var/git/meta-repo/kits/core-kit'
+let g:netrw_dirhist_1='/home/byjumperx4/.local/share/applications'
