@@ -54,7 +54,7 @@ alias protontricks-flat='flatpak run --command=protontricks com.valvesoftware.St
 alias gnous-nossh-dotfiles-push='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --mirror https://git.gnous.eu/By_JumperX4/dotfiles.git && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
 
 
-alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/suckless}'
+alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/suckless/*}'
 alias grep='grep --color=auto $@'
 alias egrep='egrep --color=auto $@'
 alias fgrep='fgrep --color=auto $@'
