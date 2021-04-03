@@ -6,7 +6,7 @@
 
 # Prompt
 
-export PS1="\[$(tput bold)\]\[\033[38;5;11m\]\[\033[48;5;235m\]\\$\[$(tput sgr0)\]\[\033[48;5;234m\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;255m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+#export PS1="\[$(tput bold)\]\[\033[38;5;11m\]\[\033[48;5;235m\]\\$\[$(tput sgr0)\]\[\033[48;5;234m\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;255m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -25,7 +25,7 @@ export PATH
 
 # Disable ctrl + s
 
-stty -ixon
+#stty -ixon
 
 # Variables
 
@@ -34,63 +34,62 @@ export PAGER=less
 export PATH=$PATH:~/.local/bin:$GOPATH/bin
 export MAKEFLAGS='-j20 -l20'
 
-# Alias
+# #alias
 
-alias ls="ls -ah --color=auto"
-alias l="ls -l"
-alias xephinit="Xephyr -br -ac -noreset -screen 2000x1000 :1 & sleep 2 ; DISPLAY=:1 sh ~/.xinitrc"
-alias x="exit"
-alias clr="clear"
-alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
-alias ts='tmux new-session -s'
-alias tl='tmux list-sessions'
-alias dotfiles-push='dotfiles push && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
-alias rrm='/bin/rm'
-alias protontricks-flat='flatpak run --command=protontricks com.valvesoftware.Steam'
+#alias ls="ls -ah --color=auto"
+#alias l="ls -l"
+#alias xephinit="Xephyr -br -ac -noreset -screen 2000x1000 :1 & sleep 2 ; DISPLAY=:1 sh ~/.xinitrc"
+#alias x="exit"
+#alias clr="clear"
+#alias ta='tmux attach -t'
+#alias tad='tmux attach -d -t'
+#alias ts='tmux new-session -s'
+#alias tl='tmux list-sessions'
+#alias ip='ip -c'
+#alias dotfiles-push='dotfiles push && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
+#alias rrm='/bin/rm'
+#alias protontricks-flat='flatpak run --command=protontricks com.valvesoftware.Steam'
 
 # for git.gnous.eu if ssh is disabled temporarly
 
-alias gnous-nossh-dotfiles-push='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --mirror https://git.gnous.eu/By_JumperX4/dotfiles.git && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
+#alias gnous-nossh-dotfiles-push='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push --mirror https://git.gnous.eu/By_JumperX4/dotfiles.git && dotfiles push --mirror git@github.com:ByJumperX4/dotfiles && dotfiles push --mirror git@gitlab.com:By_JumperX4/dotfiles'
 
 
-alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/suckless/*}'
-alias grep='grep --color=auto $@'
-alias egrep='egrep --color=auto $@'
-alias fgrep='fgrep --color=auto $@'
+#alias dotfiles-update='dotfiles add ~/{README.md,.{vimrc,bashrc,blerc},.vim,.config/{htop,neofetch,awesome,alacritty},.local/bin/{mzk,steam,youtube-local},src/suckless/*}'
+#alias grep='grep --color=auto $@'
+#alias egrep='egrep --color=auto $@'
+#alias fgrep='fgrep --color=auto $@'
 
-alias brl-icon-cache='for i in $(find /usr/share/icons/ -maxdepth 1 -type d); do sudo rm -f $i/.icon-theme.cache; sudo gtk-update-icon-cache -t -i $i; done
-
-for i in $(find ~/.icons -maxdepth 1 -type d); do sudo rm -f $i/.icon-theme.cache; sudo gtk-update-icon-cache -t -i $i; done'
+#alias brl-icon-cache='for i in $(find /usr/share/icons/ -maxdepth 1 -type d); do sudo rm -f $i/.icon-theme.cache; sudo gtk-update-icon-cache -t -i $i; done
 
 # Functions
 
-newtor() {
-    command sudo systemctl restart tor privoxy
-}
+#newtor() {
+#    command sudo systemctl restart tor privoxy
+#}
 
-rm() {
-case "$1" in
-    -rf)
-    shift
-    command mv --force -v $* /trash/
-    ;;
-    $*)
-    command mkdir -p /trash/$*$RANDOM && mv -v $* /trash/$*$RANDOM
-esac
-}
+#rm() {
+#case "$1" in
+#    -rf)
+#    shift
+#    command mv --force -v $* /trash/
+#    ;;
+#    $*)
+#    command mkdir -p /trash/$*$RANDOM && mv -v $* /trash/$*$RANDOM
+#esac
+#}
 
-fuck() {
-    command sudo $(fc -ln -1)
-}
+#fuck() {
+#    command sudo $(fc -ln -1)
+#}
 
-dotfiles() {
-    command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
-}
+#dotfiles() {
+#    command git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+#}
 
- traceroute4ever() {
-    command traceroute -4 1.1.1.1 && traceroute -4 8.8.8.8 && traceroute4ever
-}
+#traceroute4ever() {
+#    command traceroute -4 1.1.1.1 && traceroute -4 8.8.8.8 && traceroute4ever
+#}
 
 #p() {
 #case "$1" in
@@ -170,9 +169,9 @@ dotfiles() {
 #esac
 #}
 
-3mp4tomp3() {
-    for f in *.mp4; do ffmpeg -i "$f" "mp3/${f%.*}.mp3"; done
-}
+#mp4tomp3() {
+#    for f in *.mp4; do ffmpeg -i "$f" "mp3/${f%.*}.mp3"; done
+#}
 
 # Start X11
 
@@ -182,6 +181,12 @@ fi
 
 # ble.sh syntax highlighting & autocompletion (https://github.com/akinomyoga/ble.sh)
 
-. ~/.local/share/blesh/ble.sh
+#. ~/.local/share/blesh/ble.sh
 
+# Start fish
 
+if [ "$(tty)" = "/dev/tty1" ]; then
+   echo "tty 1 detected ! Won't start fish as this tty is reserved to start X11 !"
+else
+    fish && exit
+fi

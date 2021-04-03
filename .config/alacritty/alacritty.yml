@@ -56,7 +56,7 @@ window:
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
   # disable scrolling.
-  history: 100000 
+  history: 100000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
@@ -67,7 +67,7 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "monospace"
+    family: Fira Code
     # style: "Medium"
     # family: "Fira Code"
     # family: "Source Code Pro"
@@ -75,14 +75,14 @@ font:
 
   # The bold font face
   bold:
-    family: "monospace"
+    family: Fira Code
     style: "Bold"
     # family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: "monospace"
+    family: Fira Code
     style: "Medium Italic"
     # style: "Light Oblique"
     # family: "Fira Code"
@@ -119,7 +119,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false
@@ -471,7 +471,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Underline
+  style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -480,7 +480,7 @@ cursor:
 window.dynamic_title: true
 
 # Live config reload (changes require restart)
-live_config_reload: true
+live_config_reload: false
 
 debug:
   # Should display the render timer

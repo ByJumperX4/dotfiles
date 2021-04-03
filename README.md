@@ -31,37 +31,15 @@ Screens setup :
 
 DE/WM : dwm
 
-Browser : Ungoogled Chromium
+Browser : Vieb
 
 Editor : Vim & mousepad
 
-File manager : Dolphin
+File manager : Dolphin/XFE
 
 Terminal Emulator : alacritty
 
-Shell : bash with ble.sh
-
-Some useful commands to do in your terminal and shortcuts :
-
-x :  exits
-
-fuck : do the command you've just entered but this time with doas
-
-clr : alias to clear, less letters
-
-l : ls -l
-
-xephinit : runs your, xinitrc in xephir (useful to configure a wm)
-
-traceroute4ever : useful to test if your internet works
-
-newtor : restart tor service and privoxy service to get a new tor identity
-
-Ctrl + Q : go to the begining of the line
-
-Ctrl + E : go to the end of the line
-
-Ctrl + R : search for a command in your history
+Shell : fish as interactive shell, bash under the hood
 
 Vim shortcuts :
 
