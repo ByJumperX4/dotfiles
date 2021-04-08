@@ -15,11 +15,11 @@ static const int swallowfloating         = 0;   /* 1 means swallow floating wind
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
-static const int smartgaps               = 0;   /* 1 means no outer gap when there is only one window */
+static const unsigned int gappih         = 8;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 8;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 3;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 3;  /* vert outer gap between windows and screen edge */
+static const int smartgaps               = 1;   /* 1 means no outer gap when there is only one window */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
 static const char autostartblocksh[]     = "autostart_blocking.sh";
@@ -404,6 +404,8 @@ static const Rule rules[] = {
 	 *	WM_WINDOW_ROLE(STRING) = role
 	 *	_NET_WM_WINDOW_TYPE(ATOM) = wintype
 	 */
+    RULE(.wintype = WTYPE "*", .isfloating = 0)
+    RULE(.wintype = WTYPE "NORMAL", .isfloating = 0)
 	RULE(.wintype = WTYPE "DIALOG", .isfloating = 1)
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 0)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 0)
@@ -411,7 +413,12 @@ static const Rule rules[] = {
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
 	#endif // SCRATCHPADS_PATCH
+
+	/* class      instance    title       tags mask     isfloating   monitor */
+    { "*",        NULL,       NULL,       0,            0,           0 }
 };
+
+
 
 #if MONITOR_RULES_PATCH
 #if PERTAG_PATCH
@@ -814,7 +821,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_k,          pushup,                 {0} },
 	#endif // PUSH_PATCH / PUSH_NO_MASTER_PATCH
 	{ MODKEY,                       XK_i,          incnmaster,             {.i = +1 } },
-	{ MODKEY,                       XK_d,          incnmaster,             {.i = -1 } },
+	{ MODKEY,                       XK_u,          incnmaster,             {.i = -1 } },
 	#if FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },

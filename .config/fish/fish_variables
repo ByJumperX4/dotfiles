@@ -3,12 +3,11 @@
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_clr:clear
 SETUVAR _fish_abbr_dotfiles:git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
-SETUVAR _fish_abbr_dotfiles_2D_push:git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20push\x20\x26\x26\x20dotfiles\x20push\x20\x2d\x2dmirror\x20git\x40github\x2ecom\x3aByJumperX4/dotfiles\x20\x26\x26\x20dotfiles\x20push\x20\x2d\x2dmirror\x20git\x40gitlab\x2ecom\x3aBy_JumperX4/dotfiles
 SETUVAR _fish_abbr_dotfiles_2D_update:git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x7e/\x7bREADME\x2emd\x2c\x2e\x7bvimrc\x2cbashrc\x2cblerc\x7d\x2c\x2evim\x2c\x2econfig/\x7bhtop\x2cneofetch\x2cfish\x2cawesome\x2calacritty\x2cVieb/viebrc\x7d\x2c\x2elocal/bin/\x7bmzk\x2csteam\x2cyoutube\x2dlocal\x7d\x2csrc/suckless/\x2a\x7d
-SETUVAR _fish_abbr_egrep:egrep\x20\x2d\x2dcolor\x3dauto\x20\x24\x40
-SETUVAR _fish_abbr_fgrep:fgrep\x20\x2d\x2dcolor\x3dauto\x20\x24\x40
-SETUVAR _fish_abbr_gnous_2D_nossh_2D_dotfiles_2D_push:git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20push\x20\x2d\x2dmirror\x20https\x3a//git\x2egnous\x2eeu/By_JumperX4/dotfiles\x2egit\x20\x26\x26\x20dotfiles\x20push\x20\x2d\x2dmirror\x20git\x40github\x2ecom\x3aByJumperX4/dotfiles\x20\x26\x26\x20dotfiles\x20push\x20\x2d\x2dmirror\x20git\x40gitlab\x2ecom\x3aBy_JumperX4/dotfiles
-SETUVAR _fish_abbr_grep:grep\x20\x2d\x2dcolor\x3dauto\x20\x24\x40
+SETUVAR _fish_abbr_egrep:egrep\x20\x2d\x2dcolor\x3dauto
+SETUVAR _fish_abbr_fgrep:fgrep\x20\x2d\x2dcolor\x3dauto
+SETUVAR _fish_abbr_gnous_2D_nossh_2D_dotfiles_2D_push:git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20push\x20\x2d\x2dmirror\x20https\x3a//git\x2egnous\x2eeu/By_JumperX4/dotfiles\x2egit\x20\x26\x26\x20git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20push\x20\x2d\x2dmirror\x20git\x40github\x2ecom\x3aByJumperX4/dotfiles\x20\x26\x26\x20git\x20\x2d\x2dgit\x2ddir\x3d\x24HOME/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20push\x20\x2d\x2dmirror\x20git\x40gitlab\x2ecom\x3aBy_JumperX4/dotfiles
+SETUVAR _fish_abbr_grep:grep\x20\x2d\x2dcolor\x3dauto
 SETUVAR _fish_abbr_ip:ip\x20\x2dc
 SETUVAR _fish_abbr_l:ls\x20\x2dahl\x20\x2d\x2dcolor\x3dauto
 SETUVAR _fish_abbr_ls:ls\x20\x2dah\x20\x2d\x2dcolor\x3dauto
@@ -39,6 +38,7 @@ SETUVAR fish_color_selection:c0c0c0
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:00ff00
 SETUVAR fish_color_valid_path:normal
+SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow

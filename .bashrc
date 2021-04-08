@@ -16,7 +16,7 @@ fi
 # User specific environment
 if ! [ "$PATH" = "$HOME/.local/bin:$HOME/bin:" ]
 then
-    PATH="/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/.local/bin:$HOME/bin:$HOME/src/kde/kdesrc-build:$PATH"
 fi
 export PATH
 
@@ -188,5 +188,5 @@ fi
 if [ "$(tty)" = "/dev/tty1" ]; then
    echo "tty 1 detected ! Won't start fish as this tty is reserved to start X11 !"
 else
-    fish && exit
+    fish ; exit
 fi
