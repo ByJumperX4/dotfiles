@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/byjumperx4/Desktop'
 let g:netrw_dirhist_6='/home/byjumperx4/src/suckless/dwm/sources/patch'
 let g:netrw_dirhist_5='/var/git/meta-repo/repos.conf'
 let g:netrw_dirhist_4='/var/git/meta-repo/kits/media-kit/licenses'

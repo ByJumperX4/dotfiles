@@ -111,44 +111,44 @@ static const char dmenufont[]            = "monospace:size=10";
 static char c000000[]                    = "#000000"; // placeholder value
 #endif // BAR_FLEXWINTITLE_PATCH
 static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#db8fd9";
+static char normbgcolor[]                = "#171714";
+static char normbordercolor[]            = "#005500";
+static char normfloatcolor[]             = "#338833";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
-static char selfloatcolor[]              = "#005577";
+static char selfgcolor[]                 = "#ffffff";
+static char selbgcolor[]                 = "#008800";
+static char selbordercolor[]             = "#00ff00";
+static char selfloatcolor[]              = "#00ff00";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#222222";
-static char titlenormbordercolor[]       = "#444444";
+static char titlenormbgcolor[]           = "#171714";
+static char titlenormbordercolor[]       = "#005500";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#005577";
-static char titleselbordercolor[]        = "#005577";
-static char titleselfloatcolor[]         = "#005577";
+static char titleselfgcolor[]            = "#ffffff";
+static char titleselbgcolor[]            = "#008800";
+static char titleselbordercolor[]        = "#00ff00";
+static char titleselfloatcolor[]         = "#00ff00";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#222222";
-static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#db8fd9";
+static char tagsnormbgcolor[]            = "#171714";
+static char tagsnormbordercolor[]        = "#005500";
+static char tagsnormfloatcolor[]         = "#338833";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#005577";
-static char tagsselbordercolor[]         = "#005577";
-static char tagsselfloatcolor[]          = "#005577";
+static char tagsselbgcolor[]             = "#008800";
+static char tagsselbordercolor[]         = "#00ff00";
+static char tagsselfloatcolor[]          = "#00ff00";
 
-static char hidfgcolor[]                 = "#005577";
-static char hidbgcolor[]                 = "#222222";
-static char hidbordercolor[]             = "#005577";
-static char hidfloatcolor[]              = "#f76e0c";
+static char hidfgcolor[]                 = "#00ff00";
+static char hidbgcolor[]                 = "#171714";
+static char hidbordercolor[]             = "#00ff00";
+static char hidfloatcolor[]              = "#338833";
 
 static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
+static char urgbgcolor[]                 = "#171714";
 static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#db8fd9";
+static char urgfloatcolor[]              = "#338800";
 
 #if BAR_FLEXWINTITLE_PATCH
 static char normTTBbgcolor[]             = "#330000";
@@ -528,7 +528,7 @@ static const int nmaster     = 1;    /* number of clients in master area */
 #if FLEXTILE_DELUXE_LAYOUT
 static const int nstack      = 0;    /* number of clients in primary stack area */
 #endif // FLEXTILE_DELUXE_LAYOUT
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 #if DECORATION_HINTS_PATCH
 static const int decorhints  = 1;    /* 1 means respect decoration hints */
 #endif // DECORATION_HINTS_PATCH
@@ -615,11 +615,11 @@ static const Layout layouts[] = {
 	#if TILE_LAYOUT
 	{ "[]=",      tile },    /* first entry is default */
 	#endif
-//	{ "><>",      NULL },    /* no layout function means floating behavior */
 	#if MONOCLE_LAYOUT
 	{ "[M]",      monocle },
 	#endif
-	#if BSTACK_LAYOUT
+	{ "><>",      NULL },    /* no layout function means floating behavior */
+    #if BSTACK_LAYOUT
 	{ "TTT",      bstack },
 	#endif
 	#if BSTACKHORIZ_LAYOUT
@@ -774,11 +774,11 @@ static Key keys[] = {
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
-	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
+	{ MODKEY,                       XK_e,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
     { ControlMask|Mod1Mask,         XK_t,          spawn,                  {.v = termcmd } },
     #if RIODRAW_PATCH
-	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
+	{ MODKEY|ControlMask,           XK_e,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
 	{ MODKEY,                       XK_s,          rioresize,              {0} },
 	#endif // RIODRAW_PATCH
@@ -820,8 +820,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_j,          pushdown,               {0} },
 	{ MODKEY|ControlMask,           XK_k,          pushup,                 {0} },
 	#endif // PUSH_PATCH / PUSH_NO_MASTER_PATCH
-	{ MODKEY,                       XK_i,          incnmaster,             {.i = +1 } },
-	{ MODKEY,                       XK_u,          incnmaster,             {.i = -1 } },
+	{ MODKEY,                       XK_r,          incnmaster,             {.i = +1 } },
+	{ MODKEY,                       XK_t,          incnmaster,             {.i = -1 } },
 	#if FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },
@@ -919,7 +919,7 @@ static Key keys[] = {
 	#endif // XRDB_PATCH
 	{ MODKEY,                       XK_n,          setlayout,              {.v = &layouts[0]} },
 //	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[1]} },
 	#if COLUMNS_LAYOUT
 	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
 	#endif // COLUMNS_LAYOUT

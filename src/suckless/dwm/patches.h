@@ -235,7 +235,7 @@
  * will appear at the bottom and if 1 then dmenu will appear at the top.
  * https://dwm.suckless.org/patches/dmenumatchtop
  */
-#define BAR_DMENUMATCHTOP_PATCH 0
+#define BAR_DMENUMATCHTOP_PATCH 1
 
 /* Originally this was the extrabar patch, but as the handling of extra bars is now built-in
  * only the splitting of the status by a designated separator remains. As such this has been
@@ -633,7 +633,7 @@
  * used for the main monitor. E.g. normal vertical split for main monitor and
  * horizontal split for the second.
  */
-#define MONITOR_RULES_PATCH 1
+#define MONITOR_RULES_PATCH 0
 
 /* Always display the the monocle-symbol as defined in config.h if the monocle-layout
  * is activated. Do not display the number of open clients in the current tag.
@@ -1158,12 +1158,12 @@
 /* Gappless grid layout.
  * https://dwm.suckless.org/patches/gaplessgrid/
  */
-#define GAPPLESSGRID_LAYOUT 1
+#define GAPPLESSGRID_LAYOUT 0
 
 /* Gridmode (grid) layout.
  * https://dwm.suckless.org/patches/gridmode/
  */
-#define GRIDMODE_LAYOUT 1
+#define GRIDMODE_LAYOUT 0
 
 /* Horizontal grid (horizgrid) layout.
  * https://dwm.suckless.org/patches/horizgrid/
