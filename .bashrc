@@ -16,7 +16,7 @@ fi
 # User specific environment
 if ! [ "$PATH" = "$HOME/.local/bin:$HOME/bin:" ]
 then
-    PATH="/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/.local/bin:$HOME/bin:$HOME/src/kde/kdesrc-build:$PATH"
+    PATH="$HOME/.guix-profile/bin:/opt/trinity/bin:/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:$HOME/.local/bin:$HOME/bin:$HOME/src/kde/kdesrc-build:$PATH"
 fi
 export PATH
 
@@ -33,6 +33,12 @@ export EDITOR=vim
 export PAGER=less
 export PATH=$PATH:~/.local/bin:$GOPATH/bin
 export MAKEFLAGS='-j20 -l20'
+export GTK_MODULES=topmenu-gtk-module
+
+# X11 related variables
+
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 
 # #alias
 
@@ -188,5 +194,5 @@ fi
 if [ "$(tty)" = "/dev/tty1" ]; then
    echo "tty 1 detected ! Won't start fish as this tty is reserved to start X11 !"
 else
-    fish ; exit
+   fish ; exit
 fi

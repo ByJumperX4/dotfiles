@@ -5,13 +5,13 @@ Warning : commented with ass and partially in frenglish (french + english). May 
 
 My setup :
 
-Distro : Funtoo
+Distro : Parabola GNU/Linux-libre
 
 CPUs : 2x Intel Xeon X5680
 
 GPU : PNY nVidia GTX 1060 6GB
 
-GPU Driver : nVidia proprietary driver
+GPU Driver : nVidia proprietary driver (beta version)
 
 RAM : 108 GB of ram (DDR3)
 
@@ -31,13 +31,13 @@ Screens setup :
 
 DE/WM : dwm
 
-Browser : Vieb
+Browser : Iceweasel
 
-Editor : Vim & mousepad
+Editor : Vim & xed
 
-File manager : Dolphin/XFE
+File manager : Nemo
 
-Terminal Emulator : alacritty
+Terminal Emulator : urxvt
 
 Shell : fish as interactive shell, bash under the hood
 
