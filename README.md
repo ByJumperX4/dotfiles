@@ -29,15 +29,15 @@ Screens setup :
 
 1x horizontal 1920x1080 graphics tablet (in front of the middle screen, middle screen is higher so it doesn't mask the screen)
 
-DE/WM : dwm
+DE/WM : xmonad
 
-Browser : Iceweasel
+Browser : Iceweasel / Firefox
 
 Editor : Vim & xed
 
 File manager : Nemo
 
-Terminal Emulator : urxvt
+Terminal Emulator : alacritty
 
 Shell : fish as interactive shell, bash under the hood
 
