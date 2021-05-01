@@ -13,7 +13,7 @@ import XMonad.Hooks.ManageDocks
 -- Variables
 myFocusFollowsMouse :: Bool  
 myFocusFollowsMouse = False
-myTerminal          = "alacritty"
+myTerminal          = "terminology"
 myLayout            = avoidStruts $ GridRatio (4/3) ||| Full
 mystartupHook       = do
                     -- Required autostarts: panels, network icons, various commands to execute, ...
@@ -27,7 +27,7 @@ mystartupHook       = do
                     spawn "xset s off"
                     spawn "xset -dpms"
                     -- Apps to autostart
-                    spawn "schildichat-desktop"                         -- a matrix client, my favourite chat client. 
+                    spawn "matrixclient"                                -- open a script that will launch a matrix web client in firefox kiosk mode. 
 -- Keybinds
 myAdditionalKeys=   [ ("C-M1-t", spawn $ myTerminal)                    -- open a terminal.
                     , ("M-w", spawn "rofi -show run")                   -- open rofi.

@@ -37,7 +37,7 @@ Editor : Vim & xed
 
 File manager : Nemo
 
-Terminal Emulator : alacritty
+Terminal Emulator : terminology
 
 Shell : fish as interactive shell, bash under the hood
 
