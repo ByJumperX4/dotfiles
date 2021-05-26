@@ -1,7 +1,6 @@
-pipewire &
-pipewire-pulse &
-pipewire-media-session &
 xrandr --dpi 96
-xrdb -merge ~/.Xresources
-xfce4-panel &
-dbus-launch --exit-with-session xmonad
+dbus-launch pipewire &
+dbus-launch pipewire-media-session &
+dbus-launch pipewire-pulse &
+dbus-launch i3
+#startplasma-x11
