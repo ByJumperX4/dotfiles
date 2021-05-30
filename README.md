@@ -33,11 +33,11 @@ DE/WM : i3 withoyt gaps
 
 Browser : LibreWolf
 
-Editor : Vim
+Editor : Emacs with Evil
 
 File manager : Nemo
 
-Terminal Emulator : alacritty
+Terminal Emulator : XTerm
 
 Shell : fish as interactive shell, bash under the hood
 

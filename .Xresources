@@ -1,17 +1,35 @@
 Xcursor.size: 16
 
-XTerm*reverseVideo: true
+XTerm*reverseVideo: false
 
-URxvt.perl-ext-common: default,clipboard,selection-to-clipboard,matcher,tabbedex
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
 
-URxvt.background: #171714
-URxvt.foreground: #ebebeb
+xterm*loginShell: true
 
-URxvt.tabbed.new-button:	true
-URXvt.tabbed.reopen-on-close: false
+xterm*termName: xterm-color
 
-URxvt.scrollBar: true
-URxvt.scrollstyle: plain
-URxvt.saveLines: 65535
+xterm*saveLines: 20000
 
-URxvt.clipboard.autocopy: false
+xterm*Background: rgb:17/17/14
+xterm*Foreground: rgb:E2/E2/E2
+xterm*cursorColor: rgb:FF/FF/FF
+xterm*eightBitInput: false
+
+xterm*color0: rgb:05/05/05
+xterm*color1: rgb:ed/15/15
+xterm*color2: rgb:11/d1/16
+xterm*color3: rgb:f6/74/00
+xterm*color4: rgb:2c/3d/f8
+xterm*color5: rgb:71/41/86
+xterm*color6: rgb:17/85/a7
+xterm*color7: rgb:ad/ad/ad
+xterm*color8: rgb:54/54/54
+xterm*color9: rgb:ef/53/50
+xterm*color10: rgb:8b/c3/4a
+xterm*color11: rgb:ff/eb/3b
+xterm*color12: rgb:64/b5/f6
+xterm*color13: rgb:ba/68/c8
+xterm*color14: rgb:26/c6/da
+xterm*color15: rgb:e0/e0/e0
