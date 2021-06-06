@@ -29,7 +29,7 @@ export PATH
 
 # Variables
 
-export EDITOR=emacs
+export EDITOR=emc
 export PAGER=less
 export PATH=$PATH:~/.local/bin:$GOPATH/bin
 export MAKEFLAGS='-j20 -l20'
@@ -185,8 +185,8 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Start fish
 
-if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ]; then
-   startx
+if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ]; then 
+    startx
    echo "tty 1 detected ! Won't start fish as this tty is reserved to start X11 !"
 else
    fish ; exit

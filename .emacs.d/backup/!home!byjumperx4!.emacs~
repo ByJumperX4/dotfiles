@@ -6,15 +6,17 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(column-number-mode t)
- '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(wombat tsdh-dark))
+ '(custom-enabled-themes '(tsdh-dark))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(global-tab-line-mode t)
  '(package-selected-packages '(rainbow-mode))
  '(size-indication-mode t)
- '(tool-bar-position 'left))
+ '(tool-bar-position 'left)
+ '(transient-mark-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -16,6 +16,8 @@ XTerm*vt100.translations: #override \
 
 xterm*loginShell: true
 
+XTerm*font:             -*-*-*-*-11-*-*-*-*-*-*-*
+
 xterm*saveLines: 10000000
 
 xterm*Background: rgb:0a/1e/0a

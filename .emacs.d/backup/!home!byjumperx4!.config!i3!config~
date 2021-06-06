@@ -58,7 +58,7 @@ bindsym $mod+w exec --no-startup-id rofi -show run
 # start rofi window (window list)
 bindsym $mod+e exec --no-startup-id rofi -show window
 
-# bing autoclicker to Mod + d 
+# bing autoclicker to Mod + d
 bindsym $mod+d exec --no-startup-id autoclick
 
 # change focus
