@@ -1,3 +1,4 @@
+<=app-shells/bash-5.0
 <=sys-kernel/gentoo-sources-4.20
 sys-fs/zfs
 sys-fs/zfs-kmod
@@ -6,6 +7,8 @@ games-misc/bsd-games
 net-im/element-desktop-bin
 games-util/lutris
 net-misc/anydesk
+dev-java/openjdk
+dev-java/openjdk-bin
 # required by net-misc/anydesk-6.1.0::gentoo
 # required by anydesk (argument)
 x11-libs/gtkglext ~amd64
@@ -31,10 +34,15 @@ games-arcade/opensonic
 games-util/deutex
 dev-libs/angelscript
 lxde-base/lxappearance
-=dev-python/lxml-4.6.3-r1
-=dev-libs/lxml2-2.9.12-r2
-=dev-libs/libxml2-2.9.12-r2
+dev-python/lxml
+dev-libs/lxml2
+dev-libs/libxml2
 games-util/xboxdrv
 games-misc/lolcat
 dev-ruby/optimist:3
 dev-ruby/paint
+dev-libs/nss
+www-client/torbrowser
+trinity-base/*
+trinity-apps/*
+dev-tqt/*

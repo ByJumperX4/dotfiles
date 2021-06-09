@@ -15,7 +15,7 @@ window {
     anchor:     north;
     location:   north;
     width:      100%;
-    padding:    3px;
+    padding:    2px;
     children:   [ horibox ];
 }
 
@@ -40,4 +40,5 @@ element {
 }
 element selected {
     background-color: #7FFF7F;
+    text-color:	      #001600;
 }

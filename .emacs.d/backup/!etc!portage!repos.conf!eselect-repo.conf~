@@ -1,0 +1,22 @@
+# created by eselect-repo
+
+[ricerlay]
+location = /var/db/repos/ricerlay
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/ricerlay.git
+
+
+[torbrowser]
+location = /var/db/repos/torbrowser
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/torbrowser.git
+
+[2xsaiko]
+location = /var/db/repos/2xsaiko
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/2xsaiko.git
+
+[gentoo]
+location = /var/db/repos/gentoo
+sync-type = rsync
+sync-uri = rsync://ftp.belnet.be/gentoo/gentoo/

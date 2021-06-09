@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Unifont 9
+font pango:Terminus 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -74,16 +74,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h exec i3l move left
+bindsym $mod+Shift+j exec i3l move down
+bindsym $mod+Shift+k exec i3l move up
+bindsym $mod+Shift+l exec i3l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left exec i3l move left
+bindsym $mod+Shift+Down exec i3l move down
+bindsym $mod+Shift+Up exec i3l move up
+bindsym $mod+Shift+Right exec i3l move right
 
 # split in horizontal orientation
 #bindsym $mod+h split h
@@ -95,9 +95,9 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+m layout stacking
-bindsym $mod+n layout tabbed
-bindsym $mod+comma layout toggle split
+bindsym $mod+m exec i3l tabbed
+bindsym $mod+n exec i3l autosplit
+bindsym $mod+comma exec i3l 3columns 0.5 0.4 0 right
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -216,18 +216,18 @@ bar {
 exec_always i3-layouts
 
 # set i3-layouts options
-set $i3l autosplit to workspace 1
-set $i3l autosplit to workspace 2
-set $i3l autosplit to workspace 3
-set $i3l autosplit to workspace 4
-set $i3l autosplit to workspace 5
-set $i3l autosplit to workspace 6
-set $i3l autosplit to workspace 7
-set $i3l autosplit to workspace 8
-set $i3l autosplit to workspace 9
-set $i3l autosplit to workspace 10
-set $i3l autosplit to workspace 11
-set $i3l autosplit to workspace 12
+set $i3l 3columns 0.5 0.4 0 right to workspace 1
+set $i3l splitv to workspace 2
+set $i3l 3columns 0.5 0.4 0 right to workspace 3
+set $i3l 3columns 0.5 0.4 0 right to workspace 4
+set $i3l 3columns 0.5 0.4 0 right to workspace 5
+set $i3l 3columns 0.5 0.4 0 right to workspace 6
+set $i3l 3columns 0.5 0.4 0 right to workspace 7
+set $i3l 3columns 0.5 0.4 0 right to workspace 8
+set $i3l 3columns 0.5 0.4 0 right to workspace 9
+set $i3l 3columns 0.5 0.4 0 right to workspace 10
+set $i3l 3columns 0.5 0.4 0 right to workspace 11
+set $i3l 3columns 0.5 0.4 0 right to workspace 12
 
 # class                 border  bground text    indicator child_border
 client.focused          #7FFF7F #0B250B #89D589 #7FFF7F   #7FFF7F

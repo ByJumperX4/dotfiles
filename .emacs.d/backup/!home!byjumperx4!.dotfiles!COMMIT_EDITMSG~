@@ -1,0 +1,556 @@
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche master
+# Modifications qui seront validées :
+#	modifié :         .Xresources
+#	modifié :         .bashrc
+#	modifié :         .config/fish/fish_variables
+#	modifié :         .config/i3/config
+#	modifié :         .config/i3status/config
+#	modifié :         .config/rofi/menu.rasi
+#	modifié :         .emacs
+#	nouveau fichier : .emacs.d/auto-save-list/.saves-3796-PCmoncamo~
+#	nouveau fichier : .emacs.d/backup/!etc!portage!package.accept_keywords~
+#	nouveau fichier : .emacs.d/backup/!etc!tor!torrc~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.Xresources~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.config!i3!config~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.config!i3status!config~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.config!rofi!menu.rasi~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.emacs~
+#	nouveau fichier : .emacs.d/backup/!home!byjumperx4!.local!bin!autoclick~
+#	nouveau fichier : .emacs.d/backup/!usr!local!bin!autokernel~
+#	nouveau fichier : .emacs.d/backup/!usr!local!bin!gentoo-automatic-update.sh~
+#	modifié :         .emacs.d/elpa/archives/gnu/archive-contents
+#	modifié :         .emacs.d/elpa/archives/gnu/archive-contents.signed
+#	supprimé :        .emacs.d/elpa/archives/melpa-stable/archive-contents
+#	supprimé :        .emacs.d/elpa/archives/melpa/archive-contents
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/dir
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-autoloads.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-command-window.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-command-window.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-commands.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-commands.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-common.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-common.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-core.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-core.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-development.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-development.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-digraphs.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-digraphs.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-ex.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-ex.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-integration.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-integration.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-jumps.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-jumps.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-keybindings.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-keybindings.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-macros.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-macros.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-maps.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-maps.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-pkg.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-repeat.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-repeat.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-search.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-search.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-states.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-states.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-types.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-types.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-vars.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil-vars.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil.el
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil.elc
+#	supprimé :        .emacs.d/elpa/evil-20210527.2107/evil.info
+#	modifié :         .emacs.d/elpa/gnupg/pubring.kbx
+#	modifié :         .emacs.d/elpa/gnupg/pubring.kbx~
+#	modifié :         .emacs.d/elpa/gnupg/trustdb.gpg
+#	supprimé :        .emacs.d/elpa/goto-chg-20210508.1632/goto-chg-autoloads.el
+#	supprimé :        .emacs.d/elpa/goto-chg-20210508.1632/goto-chg-pkg.el
+#	supprimé :        .emacs.d/elpa/goto-chg-20210508.1632/goto-chg.el
+#	supprimé :        .emacs.d/elpa/goto-chg-20210508.1632/goto-chg.elc
+#	nouveau fichier : .emacs.d/elpa/rainbow-mode-1.0.5.signed
+#	nouveau fichier : .emacs.d/elpa/rainbow-mode-1.0.5/rainbow-mode-autoloads.el
+#	nouveau fichier : .emacs.d/elpa/rainbow-mode-1.0.5/rainbow-mode-pkg.el
+#	nouveau fichier : .emacs.d/elpa/rainbow-mode-1.0.5/rainbow-mode.el
+#	nouveau fichier : .emacs.d/elpa/rainbow-mode-1.0.5/rainbow-mode.elc
+#	nouveau fichier : .emacs.d/eshell/history
+#	modifié :         .local/bin/autokernel
+#	modifié :         .local/bin/ffmpeg-mkvtomp3
+#	modifié :         .local/bin/ffmpeg-mp4tomp3
+#	modifié :         .local/bin/ffmpeg-webmtomp3
+#
+# Modifications qui ne seront pas validées :
+#	supprimé :        .config/Vieb/viebrc
+#	supprimé :        .config/awesome/awesome-icon.png
+#	supprimé :        .config/awesome/background.png
+#	supprimé :        .config/awesome/icons/awesome16.png
+#	supprimé :        .config/awesome/icons/awesome32.png
+#	supprimé :        .config/awesome/icons/awesome48.png
+#	supprimé :        .config/awesome/icons/awesome64.png
+#	supprimé :        .config/awesome/layouts/cornerne.png
+#	supprimé :        .config/awesome/layouts/cornernw.png
+#	supprimé :        .config/awesome/layouts/cornerse.png
+#	supprimé :        .config/awesome/layouts/cornersw.png
+#	supprimé :        .config/awesome/layouts/dwindle.png
+#	supprimé :        .config/awesome/layouts/fairh.png
+#	supprimé :        .config/awesome/layouts/fairv.png
+#	supprimé :        .config/awesome/layouts/floating.png
+#	supprimé :        .config/awesome/layouts/fullscreen.png
+#	supprimé :        .config/awesome/layouts/magnifier.png
+#	supprimé :        .config/awesome/layouts/max.png
+#	supprimé :        .config/awesome/layouts/spiral.png
+#	supprimé :        .config/awesome/layouts/tile.png
+#	supprimé :        .config/awesome/layouts/tilebottom.png
+#	supprimé :        .config/awesome/layouts/tileleft.png
+#	supprimé :        .config/awesome/layouts/tiletop.png
+#	supprimé :        .config/awesome/lib/awful/autofocus.lua
+#	supprimé :        .config/awesome/lib/awful/button.lua
+#	supprimé :        .config/awesome/lib/awful/client.lua
+#	supprimé :        .config/awesome/lib/awful/client/focus.lua
+#	supprimé :        .config/awesome/lib/awful/client/shape.lua
+#	supprimé :        .config/awesome/lib/awful/client/urgent.lua
+#	supprimé :        .config/awesome/lib/awful/completion.lua
+#	supprimé :        .config/awesome/lib/awful/dbus.lua
+#	supprimé :        .config/awesome/lib/awful/ewmh.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/init.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/keys/firefox.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/keys/init.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/keys/qutebrowser.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/keys/tmux.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/keys/vim.lua
+#	supprimé :        .config/awesome/lib/awful/hotkeys_popup/widget.lua
+#	supprimé :        .config/awesome/lib/awful/init.lua
+#	supprimé :        .config/awesome/lib/awful/key.lua
+#	supprimé :        .config/awesome/lib/awful/keygrabber.lua
+#	supprimé :        .config/awesome/lib/awful/layout/init.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/corner.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/fair.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/floating.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/init.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/magnifier.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/max.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/spiral.lua
+#	supprimé :        .config/awesome/lib/awful/layout/suit/tile.lua
+#	supprimé :        .config/awesome/lib/awful/menu.lua
+#	supprimé :        .config/awesome/lib/awful/mouse/drag_to_tag.lua
+#	supprimé :        .config/awesome/lib/awful/mouse/init.lua
+#	supprimé :        .config/awesome/lib/awful/mouse/resize.lua
+#	supprimé :        .config/awesome/lib/awful/mouse/snap.lua
+#	supprimé :        .config/awesome/lib/awful/placement.lua
+#	supprimé :        .config/awesome/lib/awful/prompt.lua
+#	supprimé :        .config/awesome/lib/awful/remote.lua
+#	supprimé :        .config/awesome/lib/awful/rules.lua
+#	supprimé :        .config/awesome/lib/awful/screen.lua
+#	supprimé :        .config/awesome/lib/awful/spawn.lua
+#	supprimé :        .config/awesome/lib/awful/startup_notification.lua
+#	supprimé :        .config/awesome/lib/awful/tag.lua
+#	supprimé :        .config/awesome/lib/awful/titlebar.lua
+#	supprimé :        .config/awesome/lib/awful/tooltip.lua
+#	supprimé :        .config/awesome/lib/awful/util.lua
+#	supprimé :        .config/awesome/lib/awful/wibar.lua
+#	supprimé :        .config/awesome/lib/awful/wibox.lua
+#	supprimé :        .config/awesome/lib/awful/widget/button.lua
+#	supprimé :        .config/awesome/lib/awful/widget/calendar_popup.lua
+#	supprimé :        .config/awesome/lib/awful/widget/clienticon.lua
+#	supprimé :        .config/awesome/lib/awful/widget/common.lua
+#	supprimé :        .config/awesome/lib/awful/widget/graph.lua
+#	supprimé :        .config/awesome/lib/awful/widget/init.lua
+#	supprimé :        .config/awesome/lib/awful/widget/keyboardlayout.lua
+#	supprimé :        .config/awesome/lib/awful/widget/launcher.lua
+#	supprimé :        .config/awesome/lib/awful/widget/layoutbox.lua
+#	supprimé :        .config/awesome/lib/awful/widget/only_on_screen.lua
+#	supprimé :        .config/awesome/lib/awful/widget/progressbar.lua
+#	supprimé :        .config/awesome/lib/awful/widget/prompt.lua
+#	supprimé :        .config/awesome/lib/awful/widget/taglist.lua
+#	supprimé :        .config/awesome/lib/awful/widget/tasklist.lua
+#	supprimé :        .config/awesome/lib/awful/widget/textclock.lua
+#	supprimé :        .config/awesome/lib/awful/widget/watch.lua
+#	supprimé :        .config/awesome/lib/beautiful.lua
+#	supprimé :        .config/awesome/lib/beautiful/init.lua
+#	supprimé :        .config/awesome/lib/beautiful/theme_assets.lua
+#	supprimé :        .config/awesome/lib/beautiful/xresources.lua
+#	supprimé :        .config/awesome/lib/gears/cache.lua
+#	supprimé :        .config/awesome/lib/gears/color.lua
+#	supprimé :        .config/awesome/lib/gears/debug.lua
+#	supprimé :        .config/awesome/lib/gears/filesystem.lua
+#	supprimé :        .config/awesome/lib/gears/geometry.lua
+#	supprimé :        .config/awesome/lib/gears/init.lua
+#	supprimé :        .config/awesome/lib/gears/math.lua
+#	supprimé :        .config/awesome/lib/gears/matrix.lua
+#	supprimé :        .config/awesome/lib/gears/object.lua
+#	supprimé :        .config/awesome/lib/gears/object/properties.lua
+#	supprimé :        .config/awesome/lib/gears/protected_call.lua
+#	supprimé :        .config/awesome/lib/gears/shape.lua
+#	supprimé :        .config/awesome/lib/gears/string.lua
+#	supprimé :        .config/awesome/lib/gears/surface.lua
+#	supprimé :        .config/awesome/lib/gears/table.lua
+#	supprimé :        .config/awesome/lib/gears/timer.lua
+#	supprimé :        .config/awesome/lib/gears/wallpaper.lua
+#	supprimé :        .config/awesome/lib/menubar/icon_theme.lua
+#	supprimé :        .config/awesome/lib/menubar/index_theme.lua
+#	supprimé :        .config/awesome/lib/menubar/init.lua
+#	supprimé :        .config/awesome/lib/menubar/menu_gen.lua
+#	supprimé :        .config/awesome/lib/menubar/utils.lua
+#	supprimé :        .config/awesome/lib/naughty.lua
+#	supprimé :        .config/awesome/lib/naughty/core.lua
+#	supprimé :        .config/awesome/lib/naughty/dbus.lua
+#	supprimé :        .config/awesome/lib/naughty/init.lua
+#	supprimé :        .config/awesome/lib/wibox/container/arcchart.lua
+#	supprimé :        .config/awesome/lib/wibox/container/background.lua
+#	supprimé :        .config/awesome/lib/wibox/container/constraint.lua
+#	supprimé :        .config/awesome/lib/wibox/container/init.lua
+#	supprimé :        .config/awesome/lib/wibox/container/margin.lua
+#	supprimé :        .config/awesome/lib/wibox/container/mirror.lua
+#	supprimé :        .config/awesome/lib/wibox/container/place.lua
+#	supprimé :        .config/awesome/lib/wibox/container/radialprogressbar.lua
+#	supprimé :        .config/awesome/lib/wibox/container/rotate.lua
+#	supprimé :        .config/awesome/lib/wibox/container/scroll.lua
+#	supprimé :        .config/awesome/lib/wibox/drawable.lua
+#	supprimé :        .config/awesome/lib/wibox/hierarchy.lua
+#	supprimé :        .config/awesome/lib/wibox/init.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/align.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/constraint.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/fixed.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/flex.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/grid.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/init.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/manual.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/margin.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/mirror.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/ratio.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/rotate.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/scroll.lua
+#	supprimé :        .config/awesome/lib/wibox/layout/stack.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/background.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/base.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/calendar.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/checkbox.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/graph.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/imagebox.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/init.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/piechart.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/progressbar.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/slider.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/systray.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/textbox.lua
+#	supprimé :        .config/awesome/lib/wibox/widget/textclock.lua
+#	supprimé :        .config/awesome/mytheme.lua
+#	supprimé :        .config/awesome/rc.lua
+#	supprimé :        .config/awesome/submenu.png
+#	supprimé :        .config/awesome/taglist/squarefz.png
+#	supprimé :        .config/awesome/taglist/squarez.png
+#	supprimé :        .config/awesome/themes/default/README
+#	supprimé :        .config/awesome/themes/default/background.png
+#	supprimé :        .config/awesome/themes/default/background_white.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornerne.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornernew.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornernw.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornernww.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornerse.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornersew.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornersw.png
+#	supprimé :        .config/awesome/themes/default/layouts/cornersww.png
+#	supprimé :        .config/awesome/themes/default/layouts/dwindle.png
+#	supprimé :        .config/awesome/themes/default/layouts/dwindlew.png
+#	supprimé :        .config/awesome/themes/default/layouts/fairh.png
+#	supprimé :        .config/awesome/themes/default/layouts/fairhw.png
+#	supprimé :        .config/awesome/themes/default/layouts/fairv.png
+#	supprimé :        .config/awesome/themes/default/layouts/fairvw.png
+#	supprimé :        .config/awesome/themes/default/layouts/floating.png
+#	supprimé :        .config/awesome/themes/default/layouts/floatingw.png
+#	supprimé :        .config/awesome/themes/default/layouts/fullscreen.png
+#	supprimé :        .config/awesome/themes/default/layouts/fullscreenw.png
+#	supprimé :        .config/awesome/themes/default/layouts/magnifier.png
+#	supprimé :        .config/awesome/themes/default/layouts/magnifierw.png
+#	supprimé :        .config/awesome/themes/default/layouts/max.png
+#	supprimé :        .config/awesome/themes/default/layouts/maxw.png
+#	supprimé :        .config/awesome/themes/default/layouts/spiral.png
+#	supprimé :        .config/awesome/themes/default/layouts/spiralw.png
+#	supprimé :        .config/awesome/themes/default/layouts/tile.png
+#	supprimé :        .config/awesome/themes/default/layouts/tilebottom.png
+#	supprimé :        .config/awesome/themes/default/layouts/tilebottomw.png
+#	supprimé :        .config/awesome/themes/default/layouts/tileleft.png
+#	supprimé :        .config/awesome/themes/default/layouts/tileleftw.png
+#	supprimé :        .config/awesome/themes/default/layouts/tiletop.png
+#	supprimé :        .config/awesome/themes/default/layouts/tiletopw.png
+#	supprimé :        .config/awesome/themes/default/layouts/tilew.png
+#	supprimé :        .config/awesome/themes/default/submenu.png
+#	supprimé :        .config/awesome/themes/default/taglist/squarefw.png
+#	supprimé :        .config/awesome/themes/default/taglist/squarew.png
+#	supprimé :        .config/awesome/themes/default/theme.lua
+#	supprimé :        .config/awesome/themes/default/titlebar/close_focus.png
+#	supprimé :        .config/awesome/themes/default/titlebar/close_normal.png
+#	supprimé :        .config/awesome/themes/default/titlebar/floating_focus_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/floating_focus_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/floating_normal_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/floating_normal_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/maximized_focus_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/maximized_focus_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/maximized_normal_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/maximized_normal_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/minimize_focus.png
+#	supprimé :        .config/awesome/themes/default/titlebar/minimize_normal.png
+#	supprimé :        .config/awesome/themes/default/titlebar/ontop_focus_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/ontop_focus_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/ontop_normal_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/ontop_normal_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/sticky_focus_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/sticky_focus_inactive.png
+#	supprimé :        .config/awesome/themes/default/titlebar/sticky_normal_active.png
+#	supprimé :        .config/awesome/themes/default/titlebar/sticky_normal_inactive.png
+#	supprimé :        .config/awesome/themes/sky/awesome-icon.png
+#	supprimé :        .config/awesome/themes/sky/layouts/cornerne.png
+#	supprimé :        .config/awesome/themes/sky/layouts/cornernw.png
+#	supprimé :        .config/awesome/themes/sky/layouts/cornerse.png
+#	supprimé :        .config/awesome/themes/sky/layouts/cornersw.png
+#	supprimé :        .config/awesome/themes/sky/layouts/dwindle.png
+#	supprimé :        .config/awesome/themes/sky/layouts/fairh.png
+#	supprimé :        .config/awesome/themes/sky/layouts/fairv.png
+#	supprimé :        .config/awesome/themes/sky/layouts/floating.png
+#	supprimé :        .config/awesome/themes/sky/layouts/fullscreen.png
+#	supprimé :        .config/awesome/themes/sky/layouts/magnifier.png
+#	supprimé :        .config/awesome/themes/sky/layouts/max.png
+#	supprimé :        .config/awesome/themes/sky/layouts/spiral.png
+#	supprimé :        .config/awesome/themes/sky/layouts/tile.png
+#	supprimé :        .config/awesome/themes/sky/layouts/tilebottom.png
+#	supprimé :        .config/awesome/themes/sky/layouts/tileleft.png
+#	supprimé :        .config/awesome/themes/sky/layouts/tiletop.png
+#	supprimé :        .config/awesome/themes/sky/sky-background.png
+#	supprimé :        .config/awesome/themes/sky/theme.lua
+#	supprimé :        .config/awesome/themes/xresources/assets.lua
+#	supprimé :        .config/awesome/themes/xresources/theme.lua
+#	supprimé :        .config/awesome/themes/zenburn/awesome-icon.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/cornerne.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/cornernw.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/cornerse.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/cornersw.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/dwindle.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/fairh.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/fairv.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/floating.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/fullscreen.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/magnifier.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/max.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/spiral.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/tile.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/tilebottom.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/tileleft.png
+#	supprimé :        .config/awesome/themes/zenburn/layouts/tiletop.png
+#	supprimé :        .config/awesome/themes/zenburn/taglist/squarefz.png
+#	supprimé :        .config/awesome/themes/zenburn/taglist/squarez.png
+#	supprimé :        .config/awesome/themes/zenburn/theme.lua
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/close_focus.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/close_normal.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/floating_focus_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/floating_focus_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/floating_normal_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/floating_normal_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/maximized_focus_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/maximized_focus_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/maximized_normal_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/maximized_normal_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/ontop_focus_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/ontop_focus_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/ontop_normal_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/ontop_normal_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/sticky_focus_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/sticky_focus_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/sticky_normal_active.png
+#	supprimé :        .config/awesome/themes/zenburn/titlebar/sticky_normal_inactive.png
+#	supprimé :        .config/awesome/themes/zenburn/zenburn-background.png
+#	supprimé :        .config/awesome/titlebar/base_blue.png
+#	supprimé :        .config/awesome/titlebar/base_red.png
+#	supprimé :        .config/awesome/titlebar/close_focus.png
+#	supprimé :        .config/awesome/titlebar/close_normal.png
+#	supprimé :        .config/awesome/titlebar/floating_focus_active.png
+#	supprimé :        .config/awesome/titlebar/floating_focus_inactive.png
+#	supprimé :        .config/awesome/titlebar/floating_normal_active.png
+#	supprimé :        .config/awesome/titlebar/floating_normal_inactive.png
+#	supprimé :        .config/awesome/titlebar/maximized_focus_active.png
+#	supprimé :        .config/awesome/titlebar/maximized_focus_inactive.png
+#	supprimé :        .config/awesome/titlebar/maximized_normal_active.png
+#	supprimé :        .config/awesome/titlebar/maximized_normal_inactive.png
+#	supprimé :        .config/awesome/titlebar/ontop_focus_active.png
+#	supprimé :        .config/awesome/titlebar/ontop_focus_inactive.png
+#	supprimé :        .config/awesome/titlebar/ontop_normal_active.png
+#	supprimé :        .config/awesome/titlebar/ontop_normal_inactive.png
+#	supprimé :        .config/awesome/titlebar/sticky_focus_active.png
+#	supprimé :        .config/awesome/titlebar/sticky_focus_inactive.png
+#	supprimé :        .config/awesome/titlebar/sticky_normal_active.png
+#	supprimé :        .config/awesome/titlebar/sticky_normal_inactive.png
+#	supprimé :        .dwm/autostart.sh
+#	supprimé :        .gitmodules
+#	supprimé :        .local/bin/mzk
+#	supprimé :        .local/bin/youtube-local
+#	modifié :         .vim/.netrwhist
+#	supprimé :        .xmonad/xmonad.hs
+#
+# Fichiers non suivis:
+#	.Xauthority
+#	.bash_history
+#	.bash_logout
+#	.bash_profile
+#	.bashrc~
+#	.cache/
+#	.clamtk/
+#	.config/Element/
+#	.config/GIMP/
+#	.config/Kvantum/
+#	.config/Mojang/
+#	.config/Mumble/
+#	.config/Pactify/
+#	.config/PolarSSL/
+#	.config/QtProject.conf
+#	.config/QuaZIP/
+#	.config/dconf/
+#	.config/dunst/
+#	.config/galculator/
+#	.config/gentoo/
+#	.config/gtk-2.0/
+#	.config/gtk-3.0/
+#	.config/gtkrc
+#	.config/gtkrc-2.0
+#	.config/gtkrc-2.0.oAOeRN
+#	.config/hexchat/
+#	.config/libreoffice/
+#	.config/libvirt/
+#	.config/lutris/
+#	.config/mimeapps.list
+#	.config/nitrogen/
+#	.config/openbox/
+#	.config/pavucontrol.ini
+#	.config/pipewire/
+#	.config/pulse/
+#	.config/qt5ct/
+#	.config/quodlibet/
+#	.config/remmina/
+#	.config/user-dirs.dirs
+#	.config/user-dirs.locale
+#	.config/vlc/
+#	.config/xautoclick/
+#	.dbus/
+#	.dotfiles/
+#	.emacs.backup
+#	.emacs.d.old/
+#	.emacs.old
+#	.emacs~
+#	.eshell/
+#	.gitconfig
+#	.gnupg/
+#	.gtkrc-2.0
+#	.java/
+#	.lazarus/
+#	.lesshst
+#	.librewolf/
+#	.local/bin/autoclick
+#	.local/bin/autotiling
+#	.local/bin/az-launcher.AppImage
+#	.local/bin/ffmpeg-everythingtomp3
+#	.local/bin/i3-layouts
+#	.local/bin/i3l
+#	.local/bin/pip-review
+#	.local/bin/tldr-fmt
+#	.local/bin/ttldr
+#	.local/lib/
+#	.local/share/
+#	.minecraft/
+#	.minetest/
+#	.mozilla/
+#	.mputils/
+#	.notion/
+#	.nv/
+#	.nvidia-settings-rc
+#	.pki/
+#	.ssh/
+#	.subversion/
+#	.terminfo/
+#	.thumbnails/
+#	.tmux.conf
+#	.ts3client/
+#	.var/
+#	.viminfo
+#	.vimtmp/
+#	.w3m/
+#	.wget-hsts
+#	.xemacs/
+#	.xonotic/
+#	.xtermcontrol
+#	Bureau/
+#	Documents/
+#	Games/
+#	Images/
+#	Musique/
+#	ProjLaz/
+#	"T\303\251l\303\251chargements/"
+#	fonts.scale
+#	go/
+#	isos/
+#	pipewire-0.lock
+#	src/Menu/
+#	src/Proton/
+#	src/Vieb/
+#	src/XMoniz/
+#	src/adementary-theme/
+#	src/anbox/
+#	src/arch-bootstrap/
+#	src/aur/
+#	src/bash-5.0.tar.gz
+#	src/bash-5.0/
+#	src/ble.sh/
+#	src/centos-git-common/
+#	src/cherry/
+#	src/debootstrap/
+#	src/dump/
+#	src/dwm.working/
+#	src/el7-kernel/
+#	src/el7-librekernel/
+#	src/fpctest/
+#	src/garcon-0.4.0.tar.bz2
+#	src/garcon-0.4.0/
+#	src/garcon-0.6.4.tar.bz2
+#	src/garcon-0.6.4/
+#	src/gnome-hud-menu/
+#	src/hud-menu/
+#	src/iceweasel-uxp/
+#	src/kde/
+#	src/kde4-legacy-meta/
+#	src/kernel-418/
+#	src/libzypp/
+#	src/linux-fsync/
+#	src/linux-libre/
+#	src/linux-rt-libre-bjx4/
+#	src/linux-tkg/
+#	src/linux/
+#	src/mate-themes-3.22.22/
+#	src/mate-themes/
+#	src/mcedit2/
+#	src/mozilla-unified/
+#	src/mpm/
+#	src/myprojects/
+#	src/rdesktop-1.8.4-vrdp/
+#	src/tldr-fmt/
+#	src/tldr-original/
+#	src/tldr/
+#	src/uemacs/
+#	src/unbound-install/
+#	src/unity-gtk-module/
+#	src/vala-panel-appmenu-a46046135fde41c2baa80844cb89f6a944c4618c/
+#	src/vala-panel-appmenu/
+#	src/vertex-theme/
+#	src/xautoclick-0.31/
+#	src/xautoclick/
+#	src/xmonad-log/
+#	src/xonotic/
+#	src/your-freedom/
+#	src/your-privacy/
+#	src/youtube-local/
+#	src/zcomp-master.tar.gz
+#	src/zcomp-master/
+#	src/zypper/
+#	terminfo-24bit.src
+#

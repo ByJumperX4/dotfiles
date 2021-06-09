@@ -4,6 +4,6 @@ xrandr --dpi 96
 dbus-launch pipewire &
 dbus-launch pipewire-media-session &
 dbus-launch pipewire-pulse &
-dbus-launch i3
-#dbus-launch starttde
+#dbus-launch i3
+dbus-launch starttde
 #startplasma-x11

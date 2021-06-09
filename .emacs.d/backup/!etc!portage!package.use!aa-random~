@@ -1,0 +1,93 @@
+# required by net-libs/webkit-gtk-2.30.6::gentoo
+# required by games-util/lutris-0.5.8.3::gentoo
+# required by lutris (argument)
+media-libs/harfbuzz icu
+# required by gnome-base/gnome-keyring-3.36.0::gentoo
+# required by app-crypt/libsecret-0.20.4::gentoo
+# required by app-crypt/pinentry-1.1.0-r4::gentoo[gnome-keyring]
+# required by app-crypt/gnupg-2.2.27::gentoo
+# required by app-arch/rpm-4.16.1.3::gentoo
+# required by @selected
+# required by @world (argument)
+app-crypt/gcr gtk
+# required by gnome-base/gnome-keyring-3.36.0::gentoo
+# required by app-crypt/libsecret-0.20.4::gentoo
+# required by net-im/element-desktop-bin-1.7.22::gentoo
+# required by element-desktop-bin (argument)
+app-crypt/pinentry gnome-keyring
+gnome-base/gnome-control-center networkmanager
+
+dev-libs/libpcre ji
+
+
+# required by app-office/libreoffice-6.4.7.2::gentoo
+# required by libreoffice (argument)
+dev-libs/xmlsec nss
+# required by app-office/libreoffice-6.4.7.2::gentoo[dbus]
+# required by libreoffice (argument)
+sys-apps/dbus X
+gnome-base/gnome-shell -elogind -networkmanager -systemd -browser-extension
+x11-libs/libfm gtk
+net-dns/dnsmasq script
+x11-wm/notion xinerama
+
+# required by media-sound/pavucontrol-4.0::gentoo
+# required by pavucontrol (argument)
+dev-cpp/gtkmm X
+
+sys-apps/util-linux caps
+
+x11-libs/cairo X
+
+# required by dev-libs/libgusb-0.3.6::gentoo
+# required by x11-misc/colord-1.3.5::gentoo[gusb]
+# required by gnome-extra/cinnamon-settings-daemon-4.6.4::gentoo[colord]
+# required by gnome-extra/cinnamon-translations-4.6.2::gentoo
+# required by gnome-extra/nemo-4.6.5-r1::gentoo[nls]
+# required by nemo (argument)
+virtual/libusb udev
+# required by virtual/libusb-1-r2::gentoo
+# required by dev-libs/libgusb-0.3.6::gentoo
+# required by x11-misc/colord-1.3.5::gentoo[gusb]
+# required by gnome-extra/cinnamon-settings-daemon-4.6.4::gentoo[colord]
+# required by gnome-extra/cinnamon-translations-4.6.2::gentoo
+# required by gnome-extra/nemo-4.6.5-r1::gentoo[nls]
+# required by nemo (argument)
+dev-libs/libusb udev
+
+# required by dev-qt/qtwebengine-5.15.2_p20210224::gentoo
+# required by kde-apps/konqueror-20.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+dev-libs/libxml2 icu
+
+app-text/xmlto text
+net-dns/avahi mdnsresponder-compat
+media-libs/libsdl2 X
+dev-util/ostree curl
+dev-libs/libxml2 python
+
+# required by app-admin/setools-4.3.0::gentoo[X]
+# required by setools (argument)
+dev-python/PyQt5 widgets gui
+
+# required by dev-qt/qtgui-5.15.2-r1::gentoo[X]
+# required by dev-qt/qtopengl-5.15.2::gentoo
+# required by dev-python/PyQt5-5.15.2::gentoo[opengl]
+# required by app-admin/setools-4.3.0::gentoo[X]
+# required by sys-apps/selinux-python-3.1-r2::gentoo
+# required by sys-apps/policycoreutils-3.1-r2::gentoo
+# required by @system
+# required by @world (argument)
+x11-libs/libxkbcommon X
+# required by media-libs/mesa-21.0.3::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by dev-qt/qtgui-5.15.2-r1::gentoo
+# required by dev-qt/qtopengl-5.15.2::gentoo
+# required by dev-python/PyQt5-5.15.2::gentoo[opengl]
+# required by app-admin/setools-4.3.0::gentoo[X]
+# required by sys-apps/selinux-python-3.1-r2::gentoo
+# required by sys-apps/policycoreutils-3.1-r2::gentoo
+# required by @system
+# required by @world (argument)
+media-libs/libglvnd X

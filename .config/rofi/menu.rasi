@@ -8,7 +8,7 @@
     background-color:      #001600;
     border-color:          #E6FFE6;
     text-color:            #E6FFE6;
-    font:            "Unifont 9";
+    font:            "Terminus 9";
 }
 
 window {
