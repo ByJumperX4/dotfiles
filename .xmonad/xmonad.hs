@@ -13,7 +13,7 @@ import XMonad.Hooks.DynamicLog 		    -- logs
 myFocusFollowsMouse :: Bool  
 myFocusFollowsMouse = False
 myTerminal          = "xterm" -- Yes, I really do use xterm as my main terminal, look at my ~/.Xresources
-myLayout            = avoidStruts $ GridRatio ||| Full
+myLayout            = avoidStruts $ GridRatio (4/3) ||| Full
 myStartupHook       = do
                     -- Required autostarts: panels, network icons, various commands to execute, ...
                     spawn "numlockx"                                    -- enable numlock.
@@ -25,6 +25,7 @@ myStartupHook       = do
                     spawn "nitrogen --restore"                          -- load wallpaper.
                     spawn "xset s off"
                     spawn "xset -dpms"
+		    spawn "stalonetray"					-- system tray
                     -- Apps to autostart
                     spawn "matrixclient"                                -- open a script that will launch a matrix web client in firefox kiosk mode. 
 myWorkspaces        = ["1","2","3","4","5","6","7","8","9"]

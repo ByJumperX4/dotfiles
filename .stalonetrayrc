@@ -1,0 +1,10 @@
+background "#000000"
+decorations none
+transparent false
+dockapp_mode none
+geometry 5x1+3560+240
+max_geometry 10x1+3540+240
+window_type dock
+window_layer top
+icon_size 2
+icon_gravity NE
