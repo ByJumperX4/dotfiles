@@ -1,7 +1,7 @@
 Config { bgColor = "#000000"
        , fgColor = "#7fff7f"
        , font = "xft:xos4 Terminus:size=8:antialias=false"
-       , position = TopW L 95
+       , position = TopW L 100
        , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
 		    , Run Date "%H:%M:%S - %d/%m/%Y" "date" 10
@@ -10,5 +10,5 @@ Config { bgColor = "#000000"
 		    ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% : %cpu% : %memory% }{<fc=#7fff7f>%date%</fc> : %uname% "
+       , template = "%StdinReader% } <fc=#7fff7f>%date%</fc> { %cpu% : %memory% : %uname%                           "
        } 
