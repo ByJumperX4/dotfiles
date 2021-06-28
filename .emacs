@@ -6,9 +6,11 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(wombat tsdh-dark))
+ '(custom-enabled-themes '(tsdh-dark))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(global-tab-line-mode t)
@@ -23,3 +25,4 @@
  '(default ((t (:family "fixed" :foundry "misc" :slant normal :weight normal :height 98 :width normal)))))
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
 (xterm-mouse-mode 1)
+(setq x-select-enable-clipboard t)

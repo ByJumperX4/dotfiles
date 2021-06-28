@@ -1,6 +1,0 @@
-www-client/librewolf -clang dbus eme-free lto hwaccel pgo hardened alsa
-
-# Firefox dep useflags
-media-libs/libpng apng
-media-libs/libvpx postproc
-x11-base/xorg-server xvfb

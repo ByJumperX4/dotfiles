@@ -6,16 +6,15 @@ import System.IO
 import Control.Arrow((***), second)
 import XMonad.Util.EZConfig                 -- for keybindigs support.
 import qualified XMonad.StackSet as W       -- for window managing.
-
--- For panel support
-import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageDocks     	    -- for panel support
+import XMonad.Hooks.DynamicLog 		    -- logs
 
 -- Variables
 myFocusFollowsMouse :: Bool  
 myFocusFollowsMouse = False
-myTerminal          = "terminology"
-myLayout            = avoidStruts $ GridRatio (4/3) ||| Full
-mystartupHook       = do
+myTerminal          = "xterm" -- Yes, I really do use xterm as my main terminal, look at my ~/.Xresources
+myLayout            = avoidStruts $ GridRatio ||| Full
+myStartupHook       = do
                     -- Required autostarts: panels, network icons, various commands to execute, ...
                     spawn "numlockx"                                    -- enable numlock.
                     spawn "xsetroot -cursor_name left_ptr"              -- set left pointer cursor by default.
@@ -28,24 +27,35 @@ mystartupHook       = do
                     spawn "xset -dpms"
                     -- Apps to autostart
                     spawn "matrixclient"                                -- open a script that will launch a matrix web client in firefox kiosk mode. 
+myWorkspaces        = ["1","2","3","4","5","6","7","8","9"]
+myBar               = "xmobar"
+myPP                = xmobarPP { ppCurrent = xmobarColor "#e6ffe6" "" . wrap "<" ">" }
 -- Keybinds
-myAdditionalKeys=   [ ("C-M1-t", spawn $ myTerminal)                    -- open a terminal.
-                    , ("M-w", spawn "rofi -show run")                   -- open rofi.
+myAdditionalKeys =  [ ("C-M1-t", spawn $ myTerminal)                    -- open a terminal.
+                    , ("M-w", spawn "rofi -show run")                   -- open rofi run prompt.
+		    , ("M-e", spawn "rofi -show window")		-- open rofi window prompt.
                     , ("M-x", kill)                                     -- close current window.
                     , ("M-m", sendMessage NextLayout)                   -- toggle "maximized" mode.
-                    , ("M-S-q", spawn "pkill X")       -- quit xmonad.
-                    , ("M-<Space>", withFocused $ windows . W.sink)     -- Push window back into tiling.
-                    ]
+                    , ("M-S-q", spawn "pkill X")       			-- quit xmonad.
+                    , ("M-<Space>", withFocused $ windows . W.sink)     -- push window back into tiling.
+                    ] ++ 
+    		    [ (otherModMasks ++ "M-" ++ [key], action tag)
+      		    | (tag, key)  <- zip myWorkspaces "123456789"
+      		    , (otherModMasks, action) <- [ ("", windows . W.view)
+                    , ("S-", windows . W.shift)]
+    		    ]
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_t)    -- toggle bar with mod + t
+-- Config
+myConfig = def	    { modMask               = mod4Mask
+     	    	    , workspaces = myWorkspaces
+          	    , terminal              = myTerminal
+    		    , layoutHook            = myLayout 
+    		    , manageHook            = manageHook def <+> manageDocks
+    		    , focusFollowsMouse     = myFocusFollowsMouse
+    		    , startupHook           = myStartupHook
+    		    , normalBorderColor     = "#0b250b"
+    		    , focusedBorderColor    = "#7fff7f" 
+    		    } `additionalKeysP` myAdditionalKeys
+
 -- Main
-main = do
-  replace
-  xmonad $ xfceConfig 
-    { modMask               = mod4Mask 
-    , terminal              = myTerminal
-    , layoutHook            = myLayout 
-    , manageHook            = manageHook def <+> manageDocks
-    , focusFollowsMouse     = myFocusFollowsMouse
-    , startupHook           = mystartupHook
-    , normalBorderColor     = "#353528"
-    , focusedBorderColor    = "#00FF00" 
-    } `additionalKeysP` myAdditionalKeys
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig

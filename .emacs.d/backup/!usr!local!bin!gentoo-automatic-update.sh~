@@ -1,2 +1,0 @@
-#!/bin/sh
-glsa-check --list ; FETCHCOMMAND="$FETCHCOMMAND --limit-rate=40k" RESUMECOMMAND="$RESUMECOMMAND --limit-rate=40" emerge --sync ; eix-update ; FETCHCOMMAND="$FETCHCOMMAND --limit-rate=40k" RESUMECOMMAND="$RESUMECOMMAND --limit-rate=40k" emerge -j2 -uDN @world && emerge @preserved-rebuild && revdep-rebuild && emerge --depclean && revdep-rebuild ; quickpkg @world  

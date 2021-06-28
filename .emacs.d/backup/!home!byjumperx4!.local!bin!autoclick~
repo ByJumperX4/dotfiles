@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ $(pstree | grep autoclick) = "" ]
-then
-    pkill autoclick
-else
-    cautoclick -p 300 -i 85 -r 10 -n 100000000000
-fi

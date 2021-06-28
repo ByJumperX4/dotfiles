@@ -5,13 +5,13 @@ Warning : commented with ass and partially in frenglish (french + english). May 
 
 My setup :
 
-Distro : Gentoo
+Distro : Gentoo Hardened OpenRC SELinux + ClamAV Root-On-ZFS
 
 CPUs : 2x Intel Xeon X5680
 
 GPU : PNY nVidia GTX 1060 6GB
 
-GPU Driver : nVidia proprietary driver (beta version)
+GPU Driver : nVidia proprietary driver
 
 RAM : 108 GB of ram (DDR3)
 
@@ -29,24 +29,12 @@ Screens setup :
 
 1x horizontal 1920x1080 graphics tablet (in front of the middle screen, middle screen is higher so it doesn't mask the screen)
 
-DE/WM : i3 withoyt gaps
+DE/WM : xmonad
 
-Browser : LibreWolf
-
-Editor : Emacs with Evil
+Editor : Emacs
 
 File manager : Nemo
 
 Terminal Emulator : XTerm
 
-Shell : fish as interactive shell, bash under the hood
-
-Vim shortcuts :
-
-Ctrl + S : save
-
-Ctrl + Q : quit
-
-Ctrl + Z : undo
-
-Ctrl + Y : redo
+Shell : fish as interactive shell, autostarted with bash
