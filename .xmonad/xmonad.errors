@@ -1,7 +1,7 @@
 
-xmonad.hs:9:37: warning: [-Wtabs]
-    Tab character found here, and in 42 further locations.
+xmonad.hs:3:26: warning: [-Wtabs]
+    Tab character found here, and in 100 further locations.
     Please use spaces instead.
   |
-9 | import XMonad.Hooks.ManageDocks             -- for panel support
-  |                                     ^^^^
+3 | import XMonad.Layout.Grid                                               -- my favourite layout.
+  |                          ^^^^^^^

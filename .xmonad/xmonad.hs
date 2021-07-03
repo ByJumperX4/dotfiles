@@ -1,41 +1,48 @@
 import XMonad
-import XMonad.Layout.Grid                   -- my favourite layout.
-import XMonad.Config.Xfce                   -- for XFCE compatibility, as I use XFCE's panel with XMonad.
-import XMonad.Util.Replace                  -- to replace a currently running window manager automatically.
+import qualified XMonad as X
+import XMonad.Layout.Grid						-- my favourite layout.
+import XMonad.Util.Replace						-- to replace a currently running window manager automatically.
 import System.IO
 import Control.Arrow((***), second)
-import XMonad.Util.EZConfig                 -- for keybindigs support.
-import qualified XMonad.StackSet as W       -- for window managing.
-import XMonad.Hooks.ManageDocks     	    -- for panel support
-import XMonad.Hooks.DynamicLog 		    -- logs
+import XMonad.Util.EZConfig						-- for keybindigs support.
+import qualified XMonad.StackSet as W					-- for window managing.
+import XMonad.Hooks.ManageDocks						-- for panel support
+import XMonad.Hooks.DynamicLog						-- logs
+import qualified XMonad.Hooks.DynamicBars as Bars
+import qualified XMonad.Util.Run as Run
 
 -- Variables
-myFocusFollowsMouse :: Bool  
 myFocusFollowsMouse = False
-myTerminal          = "xterm" -- Yes, I really do use xterm as my main terminal, look at my ~/.Xresources
-myLayout            = avoidStruts $ GridRatio (4/3) ||| Full
+myTerminal          = "xterm"						-- yes, I really do use xterm as my main terminal, look at my ~/.Xresources
+myLayout            = avoidStruts $ GridRatio (4/3) ||| Full		-- set layout to grid, full is used for maximized windows (toggle with mod + m)
 myStartupHook       = do
                     -- Required autostarts: panels, network icons, various commands to execute, ...
                     spawn "numlockx"                                    -- enable numlock.
                     spawn "xsetroot -cursor_name left_ptr"              -- set left pointer cursor by default.
-                    spawn "pkill dhcpcd-gtk"                            -- kill remaining network applets.
-                    spawn "sleep 0.5 && dhcpcd-gtk"                     -- start a new network applet.
-                    spawn "pkill xfce4-panel"                           -- kill remaining xfce panel.
-                    spawn "sleep 0.5 && xfce4-panel"                    -- start xfce's panel.
                     spawn "nitrogen --restore"                          -- load wallpaper.
                     spawn "xset s off"
                     spawn "xset -dpms"
-		    spawn "stalonetray"					-- system tray
+		    spawn "pkill stalonetray ; stalonetray"					-- system tray
+		    Bars.dynStatusBarStartup barCreator barDestroyer
                     -- Apps to autostart
-                    spawn "matrixclient"                                -- open a script that will launch a matrix web client in firefox kiosk mode. 
+                    spawn "matrixclient"                                -- open a script that will launch a matrix client. 
 myWorkspaces        = ["1","2","3","4","5","6","7","8","9"]
-myBar               = "xmobar"
+-- Bars setup
+myBar              = "xmobar -x 0 -t '%StdinReader% } <fc=#7fff7f>%date%</fc> { %cpu% : %memory% : %uname%                                '" -- the spaces are there to make space for stalonetray
 myPP                = xmobarPP { ppCurrent = xmobarColor "#e6ffe6" "" . wrap "<" ">" }
+barCreator :: Bars.DynamicStatusBar
+barCreator (X.S sid) = Run.spawnPipe $ "xmobar --screen " ++ show sid
+
+barDestroyer :: Bars.DynamicStatusBarCleanup
+barDestroyer = return ()
 -- Keybinds
 myAdditionalKeys =  [ ("C-M1-t", spawn $ myTerminal)                    -- open a terminal.
                     , ("M-w", spawn "rofi -show run")                   -- open rofi run prompt.
 		    , ("M-e", spawn "rofi -show window")		-- open rofi window prompt.
-                    , ("M-x", kill)                                     -- close current window.
+		    , ("M-d", spawn "autoclick")			-- launch an autoclicker
+		    , ("M-v", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle") -- mute sound
+		    , ("M-b", spawn "pactl set-source-mute @DEFAULT_SOURCE@ toggle") -- mute mic
+		    , ("M-x", kill)                                     -- close current window.
                     , ("M-m", sendMessage NextLayout)                   -- toggle "maximized" mode.
                     , ("M-S-q", spawn "pkill X")       			-- quit xmonad.
                     , ("M-<Space>", withFocused $ windows . W.sink)     -- push window back into tiling.
@@ -50,7 +57,8 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_t)    -- toggl
 myConfig = def	    { modMask               = mod4Mask
      	    	    , workspaces = myWorkspaces
           	    , terminal              = myTerminal
-    		    , layoutHook            = myLayout 
+    		    , layoutHook            = myLayout
+		    , handleEventHook 	    = Bars.dynStatusBarEventHook barCreator barDestroyer
     		    , manageHook            = manageHook def <+> manageDocks
     		    , focusFollowsMouse     = myFocusFollowsMouse
     		    , startupHook           = myStartupHook
@@ -59,4 +67,4 @@ myConfig = def	    { modMask               = mod4Mask
     		    } `additionalKeysP` myAdditionalKeys
 
 -- Main
-main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig		-- load everything
