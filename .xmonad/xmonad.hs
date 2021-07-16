@@ -23,6 +23,7 @@ myStartupHook       = do
                     spawn "xset s off"
                     spawn "xset -dpms"
 		    spawn "pkill stalonetray ; stalonetray"					-- system tray
+		    spawn "pkill xcompmgr ; xcompmgr -c -f -I 0.075 -O 0.075 -r 10 -o 0.25 -l 0 -t 0"		-- compositor
 		    Bars.dynStatusBarStartup barCreator barDestroyer
                     -- Apps to autostart
                     spawn "matrixclient"                                -- open a script that will launch a matrix client. 
@@ -39,7 +40,7 @@ barDestroyer = return ()
 myAdditionalKeys =  [ ("C-M1-t", spawn $ myTerminal)                    -- open a terminal.
                     , ("M-w", spawn "rofi -show run")                   -- open rofi run prompt.
 		    , ("M-e", spawn "rofi -show window")		-- open rofi window prompt.
-		    , ("M-d", spawn "autoclick")			-- launch an autoclicker
+		    , ("C-M1-d", spawn "autoclick")			-- launch an autoclicker
 		    , ("M-v", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle") -- mute sound
 		    , ("M-b", spawn "pactl set-source-mute @DEFAULT_SOURCE@ toggle") -- mute mic
 		    , ("M-x", kill)                                     -- close current window.
