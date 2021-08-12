@@ -3,6 +3,9 @@ My dotfiles. Fell free to use them and fork them.
 
 Warning : commented with ass and partially in frenglish (french + english). May be impossible to understand.
 
+You can get my Firefox Color theme [here](https://color.firefox.com/?theme=XQAAAAIfAwAAAAAAAABBqYhm849SCicxcUN7ViuG_ebZUZXOFqkBopaPs6h5TfgsoKxLuWMWY3dHRCnsX-7EkSmucBB2AWcEXCjU4E0T9-zjakWeQXyWKme8vepZBsin-1UD6p3850ufIL16g7AkpWyvms-NUO7ROlLXLGtO51zsyc6IpTRZ37xwRfr8j5weN06mif80KXrzqBetU9nKwG1Q9eJy94VOeNxnxYbvfN-0GEqNYsoR8Wxbkx65hgFhEOE2yFC7f10ATBtvrCocWfGw_um7PBhXCfBX6fm2w0fZzqyAaTBE8hsnzau0JgpAIEY7HIGsdZ0zE1fvDiWe9cdRXuarNRnZCtpAncdY2DEtnjlcGXXCOwSqkgCnrs-BFs84z6Tpmyq1Wqig-SzTIp9MxHDnkKND7idR2mNsli_Pe9S8D50jA-PmzgVNrwPnbsqB5b6NEbW5j5QrEcyNkRrYGCcsvp97_qjx1ptpbyO2P_7lJzw). Works with Tor Browser too, you need the Firefox Color extension from Mozilla.
+
+
 My setup :
 
 Distro : Gentoo Hardened OpenRC SELinux + ClamAV Root-On-ZFS

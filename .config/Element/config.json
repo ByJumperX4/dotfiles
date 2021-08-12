@@ -1,0 +1,31 @@
+{
+    "settingDefaults": {
+        "custom_themes": [
+            
+            {
+    "name": "Greenie Dark by @by_jumperx4:kde.org",
+    "is_dark": true,
+    "colors": {
+        "accent-color": "#5b755b",
+        "primary-color": "#5b7f5b",
+        "warning-color": "#b24c00",
+
+        "sidebar-color": "#0a1e0a",
+        "roomlist-background-color": "#001600",
+        "roomlist-text-color": "#7fff7f",
+        "roomlist-text-secondary-color": "#5bff5b",
+        "roomlist-highlights-color": "#0a1e0a",
+        "roomlist-separator-color": "#001600",
+
+        "timeline-background-color": "#000800",
+        "timeline-text-color": "#7fff7f",
+        "timeline-text-secondary-color": "#5bff5b",
+        "timeline-highlights-color": "#0a1e0a",
+        "reaction-row-button-selected-bg-color": "#5b755b"
+    }
+}
+
+        ]
+    },
+    "showLabsSettings": true
+}
