@@ -1,2 +1,2 @@
 #!/bin/sh
-gnome-screenshot -i
+mate-screenshot -i

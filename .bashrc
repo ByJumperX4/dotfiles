@@ -185,9 +185,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Start fish
 
-if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ]; then 
+if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ]; then
     startx
    echo "tty 1 detected ! Won't start fish as this tty is reserved to start X11 !"
 else
-   fish ; exit
+    fortune | cowsay
+    fish ; exit
 fi

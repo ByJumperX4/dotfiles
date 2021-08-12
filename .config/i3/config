@@ -9,6 +9,10 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Float everything
+for_window [class="[.]*"] floating enable
+
+# use Super key
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -95,9 +99,9 @@ bindsym $mod+Shift+Right exec i3l move right
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+m exec i3l tabbed
-bindsym $mod+n exec i3l autosplit
-bindsym $mod+comma exec i3l 3columns 0.5 0.4 0 right
+#bindsym $mod+m exec i3l tabbed
+#bindsym $mod+n exec i3l autosplit
+#bindsym $mod+comma exec i3l 3columns 0.5 0.4 0 right
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -116,18 +120,18 @@ bindsym --release button2 kill
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-set $ws11 "11"
-set $ws12 "12"
+set $ws1 " 1 "
+set $ws2 " 2 "
+set $ws3 " 3 "
+set $ws4 " 4 "
+set $ws5 " 5 "
+set $ws6 " 6 "
+set $ws7 " 7 "
+set $ws8 " 8 "
+set $ws9 " 9 "
+set $ws10 " 10 "
+set $ws11 " 11 "
+set $ws12 " 12 "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -163,7 +167,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+a restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'pkill X'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -194,40 +198,23 @@ bindsym $mod+c mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-	position top
-	workspace_buttons yes
-	tray_output primary
-	colors {
-    background #001200
-    statusline #E6FFE6
-    separator  #89D589
-
-    focused_workspace  #0B250B #89D589 #001600
-    active_workspace   #0A1E0A #0B250B #89D589
-    inactive_workspace #001600 #0B250B #89D589
-    urgent_workspace   #FF9F59 #B24C00 #89D589
-    binding_mode       #FF9F59 #B24C00 #89D589
-  }
-}
 
 # start i3-layouts
-exec_always i3-layouts
+#exec_always i3-layouts
 
 # set i3-layouts options
-set $i3l 3columns 0.5 0.4 0 right to workspace 1
-set $i3l splitv to workspace 2
-set $i3l 3columns 0.5 0.4 0 right to workspace 3
-set $i3l 3columns 0.5 0.4 0 right to workspace 4
-set $i3l 3columns 0.5 0.4 0 right to workspace 5
-set $i3l 3columns 0.5 0.4 0 right to workspace 6
-set $i3l 3columns 0.5 0.4 0 right to workspace 7
-set $i3l 3columns 0.5 0.4 0 right to workspace 8
-set $i3l 3columns 0.5 0.4 0 right to workspace 9
-set $i3l 3columns 0.5 0.4 0 right to workspace 10
-set $i3l 3columns 0.5 0.4 0 right to workspace 11
-set $i3l 3columns 0.5 0.4 0 right to workspace 12
+#set $i3l 3columns 0.5 0.4 0 right to workspace 1
+#set $i3l splitv to workspace 2
+#set $i3l 3columns 0.5 0.4 0 right to workspace 3
+#set $i3l 3columns 0.5 0.4 0 right to workspace 4
+#set $i3l 3columns 0.5 0.4 0 right to workspace 5
+#set $i3l 3columns 0.5 0.4 0 right to workspace 6
+#set $i3l 3columns 0.5 0.4 0 right to workspace 7
+#set $i3l 3columns 0.5 0.4 0 right to workspace 8
+#set $i3l 3columns 0.5 0.4 0 right to workspace 9
+#set $i3l 3columns 0.5 0.4 0 right to workspace 10
+#set $i3l 3columns 0.5 0.4 0 right to workspace 11
+#set $i3l 3columns 0.5 0.4 0 right to workspace 12
 
 # class                 border  bground text    indicator child_border
 client.focused          #7FFF7F #0B250B #89D589 #7FFF7F   #7FFF7F
@@ -254,7 +241,7 @@ focus_follows_mouse no
 exec --no-startup-id xrdb -override ~/.Xresources
 exec --no-startup-id numlockx			# Activate numlock
 exec --no-startup-id nitrogen --restore		# Set wallpaper
-exec --no-startup-id dunst			# Notification daemon
-exec --no-startup-id pasystray			# Sound applet
-exec --no-startup-id nm-applet			# Network applet
+#exec --no-startup-id dunst			# Notification daemon
+#exec --no-startup-id pasystray			# Sound applet
+#exec --no-startup-id nm-applet			# Network applet
 exec --no-startup-id element-desktop		# Chat client
