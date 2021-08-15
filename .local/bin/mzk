@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# This is mzk, a very small script to launch vlc with the entire music playlist. Just change the path to your music folder
-
-cvlc ~/Musique/mp3

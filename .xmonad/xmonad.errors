@@ -1,7 +1,0 @@
-
-xmonad.hs:3:26: warning: [-Wtabs]
-    Tab character found here, and in 104 further locations.
-    Please use spaces instead.
-  |
-3 | import XMonad.Layout.Grid                                               -- my favourite layout.
-  |                          ^^^^^^^

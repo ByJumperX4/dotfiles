@@ -1,2 +1,0 @@
-#!/bin/sh
-doas sh -c "cp /usr/src/linux-$(uname -r)/.config ./.config ; make olddefconfig clean prepare all install modules_install -j16 ; emerge -v @module-rebuild ; dracut --kver $(make kernelversion) --force ; sh /boot/grub-update.sh ; echo [DONE] Kernel version: $(make kernelversion)"
