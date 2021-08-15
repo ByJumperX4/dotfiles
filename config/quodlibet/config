@@ -1,0 +1,69 @@
+[settings]
+columns = title,~#length,~rating
+	
+default_rating = 0.0
+ratings = 1
+scan = /home/byjumperx4/Musique/mp3
+
+[memory]
+browser = SearchBar
+chooser_dir = /home/byjumperx4/Musique
+column_expands = title,1
+	
+column_widths = title,-1
+	
+open_browsers = 
+plugin_prefs_maximized = 0
+plugin_prefs_position = 1949 1986
+plugin_prefs_size_ = 750 500
+plugin_selection = WaveformSeekBar
+prefs_page = tagging
+queue_disable = False
+queue_expanded = False
+quodlibet_last_active_version = 4.4.0
+quodlibet_maximized = 0
+quodlibet_position = 1365 1720
+quodlibet_size_ = 1920 1063
+repeat = False
+seek = 0
+shuffle = True
+shuffle_mode = weighted
+sidebar_pos = 0.25
+song = /home/byjumperx4/Musique/mp3/AC_DC - Moneytalks (Official HD Video)-2lqdErI9uss.mp3
+sortby = 
+	
+volume = 0.3580322265625
+
+[player]
+gst_buffer = 3.0
+is_playing = True
+replaygain = true
+replaygain_mode = auto
+
+[browsers]
+albumlist_pos = 0.07864583333333333
+collectionbrowser_pos = 0.4
+covergrid_pos = 0.4004282655246253
+filesystem_pos = 0.4
+internetradio_pos = 0.4
+pane_selection = 0	.
+	0	.
+panedbrowser_pane_widths = 0.503125
+panedbrowser_pos = 0.08165548098434004
+playlistsbrowser_pos = 0.4
+query_text = 
+
+[__config__]
+version = 0
+
+[plugins]
+active_plugins = WaveformSeekBar
+	SeekBar
+quodlibet.fake.plugins.waveformseekbar_show_current_pos = True
+
+[editing]
+save_to_songs = false
+
+[song_list]
+auto_sort = true
+

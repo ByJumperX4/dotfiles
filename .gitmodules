@@ -1,3 +1,0 @@
-[submodule "src/dwm"]
-	path = src/dwm
-	url = https://github.com/bakkeby/dwm-flexipatch.git
