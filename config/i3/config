@@ -19,25 +19,10 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:Terminus 9
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-#exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym $mod+v exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+b exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -51,16 +36,11 @@ bindsym Control+mod1+t exec xterm
 # kill focused window
 bindsym $mod+x kill
 
-# start rofi run (a program launcher)
-bindsym $mod+w exec --no-startup-id rofi -show run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+# start program launcher
+bindsym $mod+w exec --no-startup-id rofi -show run	# Execute commands
+bindsym $mod+q exec --no-startup-id rofi -show drun	# Execute desktop entried
+bindsym $mod+e exec --no-startup-id rofi -show window	# Switch windows
 
-# start rofi window (window list)
-bindsym $mod+e exec --no-startup-id rofi -show window
 
 # bing autoclicker to Mod + d 
 bindsym $mod+d exec --no-startup-id autoclick
@@ -78,42 +58,25 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h exec i3l move left
-bindsym $mod+Shift+j exec i3l move down
-bindsym $mod+Shift+k exec i3l move up
-bindsym $mod+Shift+l exec i3l move right
+bindsym Mod1+Shift+h move left
+bindsym Mod1+Shift+j move down
+bindsym Mod1+Shift+k move up
+bindsym Mod1+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left exec i3l move left
-bindsym $mod+Shift+Down exec i3l move down
-bindsym $mod+Shift+Up exec i3l move up
-bindsym $mod+Shift+Right exec i3l move right
-
-# split in horizontal orientation
-#bindsym $mod+h split h
-
-# split in vertical orientation
-#bindsym $mod+v split v
+bindsym Mod1+Shift+Left move left
+bindsym Mod1+Shift+Down move down
+bindsym Mod1+Shift+Up move up
+bindsym Mod1+Shift+Right move right
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+m exec i3l tabbed
-#bindsym $mod+n exec i3l autosplit
-#bindsym $mod+comma exec i3l 3columns 0.5 0.4 0 right
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # kill window with middle click on title bar
 bindsym --release button2 kill
@@ -196,26 +159,7 @@ mode "resize" {
 
 bindsym $mod+c mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-# start i3-layouts
-#exec_always i3-layouts
-
-# set i3-layouts options
-#set $i3l 3columns 0.5 0.4 0 right to workspace 1
-#set $i3l splitv to workspace 2
-#set $i3l 3columns 0.5 0.4 0 right to workspace 3
-#set $i3l 3columns 0.5 0.4 0 right to workspace 4
-#set $i3l 3columns 0.5 0.4 0 right to workspace 5
-#set $i3l 3columns 0.5 0.4 0 right to workspace 6
-#set $i3l 3columns 0.5 0.4 0 right to workspace 7
-#set $i3l 3columns 0.5 0.4 0 right to workspace 8
-#set $i3l 3columns 0.5 0.4 0 right to workspace 9
-#set $i3l 3columns 0.5 0.4 0 right to workspace 10
-#set $i3l 3columns 0.5 0.4 0 right to workspace 11
-#set $i3l 3columns 0.5 0.4 0 right to workspace 12
-
+# Define colors
 # class                 border  bground text    indicator child_border
 client.focused          #7FFF7F #0B250B #89D589 #7FFF7F   #7FFF7F
 client.focused_inactive #0B250B #0A1E0A #89D589 #0B250B   #0B250B
@@ -225,23 +169,28 @@ client.placeholder      #0B250B #0A1E0A #89D589 #0B250B   #0B250B
 
 client.background       #0A1E0A
 
+
 # Hide borders adjacent to screen edges
 hide_edge_borders yes
 
 # Align title to center
-title_align left
+title_align center
 
 # Set border size
 default_border normal 1
+
+# Draw a titlebar for everything
+for_window [class="[.]*"] border normal
 
 # Make focus NOT follow mouse
 focus_follows_mouse no
 
 # Autoexec
-exec --no-startup-id xrdb -override ~/.Xresources
+exec xcompmgr -c -f -I 0.075 -O 0.075 -r 10 -o 0.25 -l 0 -t 0 # Start compositor
+exec --no-startup-id xrdb -override ~/.Xresources      	      # Load XTerm config and other things
 exec --no-startup-id numlockx			# Activate numlock
-exec --no-startup-id nitrogen --restore		# Set wallpaper
+#exec --no-startup-id nitrogen --restore	# Set wallpaper
 #exec --no-startup-id dunst			# Notification daemon
 #exec --no-startup-id pasystray			# Sound applet
 #exec --no-startup-id nm-applet			# Network applet
-exec --no-startup-id element-desktop		# Chat client
+exec --no-startup-id matrixclient		# Chat client

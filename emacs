@@ -57,3 +57,5 @@
   ;; http://shreevatsa.wordpress.com/2006/10/22/emacs-copypaste-and-x/
   ;; http://www.mail-archive.com/help-gnu-emacs@gnu.org/msg03577.html
  ))
+
+(setq auto-save-default nil)

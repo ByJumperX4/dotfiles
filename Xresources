@@ -20,7 +20,7 @@ xterm*saveLines: 10000000
 
 xterm*Background: rgb:0a/1e/0a
 xterm*Foreground: rgb:e6/ff/e6
-xterm*cursorColor: rgb:cd/ff/cd
+xterm*cursorColor: rgb:7f/ff/7f
 xterm*eightBitInput: false
 
 xterm*color0: rgb:00/16/00
@@ -31,6 +31,7 @@ xterm*color4: rgb:00/4c/b2
 xterm*color5: rgb:b2/4c/b2
 xterm*color6: rgb:00/ff/b2
 xterm*color7: rgb:89/d5/89
+
 xterm*color8: rgb:5b/75/5b
 xterm*color9: rgb:ff/9f/59
 xterm*color10: rgb:7f/ff/7f
@@ -39,3 +40,5 @@ xterm*color12: rgb:59/9f/ff
 xterm*color13: rgb:d8/a5/d8
 xterm*color14: rgb:7f/ff/d8
 xterm*color15: rgb:c3/eb/c3
+
+

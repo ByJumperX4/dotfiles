@@ -8,7 +8,7 @@ You can get my Firefox Color theme [here](https://color.firefox.com/?theme=XQAAA
 
 My setup :
 
-Distro : Gentoo Hardened OpenRC SELinux + ClamAV Root-On-ZFS
+Distro : Fedora GNU/Linux-libre
 
 CPUs : 2x Intel Xeon X5680
 

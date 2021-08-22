@@ -31,15 +31,6 @@ export QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme.
 # Aliases
 #
 
-# Dotfiles-specific, you can remove if you don't manage your dotfiles
-# -- Obsolete
-#alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # Execute git commands inside of the dotfiles repo
-# Push the changes to the 3 mirrors I use, this is only specific to me and won't work if you don't own my ssh private key. And I hope you don't.
-alias dotfiles-push="git push --mirror git@github.com:ByJumperX4/dotfiles && git push --mirror git@gitlab.com:By_JumperX4/dotfiles"
-# Update all the files, must run this before commiting anything
-#alias dotfiles-update="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add ~/{README.md,.{emacs,bashrc,xinitrc,Xresources},.config/qt{5,6}ct/colors/greenie-dark.conf,.icons/oomox-greenie-dark,.themes/oomox-greenie-dark,.local/bin/{autokernel,decompressall,ffmpeg-{mkv,mp4,webm}tomp3,gemacs,laz,screenshot,steam},.emacs.d/elpa,.config/{Element/config.json,rofi,htop,neofetch,fish,i3}}"
-# End of dotfiles-specific aliases
-
 # Coloration in commands, replace some commands with themselves but with arguments to enable colors
 
 alias ip="ip -c"
@@ -54,9 +45,10 @@ alias l="ls -ahl --color" # Same as above, but instead display one file per line
 # Non-categorized aliases
 
 alias vi="emacs" # Replace the vi command with emacs.
+alias dvi="doas emacs" # Set dvi to emacs as root.
 alias clr="clear" # Use "clr" to clear the terminal, this is shorter.
 alias x="exit" # Use "x" to exit, this is shorter.
-alias newtor="sudo systemctl restart tor" # Restart tor to get a new tor circuit
+alias newtor="doas systemctl restart tor" # Restart tor to get a new tor circuit
 
 #
 # Autostart
