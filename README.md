@@ -32,10 +32,12 @@ Screens setup :
 
 1x horizontal 1920x1080 graphics tablet (in front of the middle screen, middle screen is higher so it doesn't mask the screen)
 
+Web browser : GNU IceCat and Tor Browser
+
 DE/WM : MATE + i3 in floating mode
 
 Editor : Emacs
 
 Terminal Emulator : XTerm
 
-Shell : fish as interactive shell, autostarted with bash
+Shell : bash
