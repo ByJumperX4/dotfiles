@@ -1,3 +1,5 @@
+#!/bin/bash
+# Please don't use /bin/bash in your scripts, make POSIX shell scripts
 #        __            __          
 #       / /  ___ ____ / /  ________
 #    _ / _ \/ _ `(_-</ _ \/ __/ __/  Made by:
