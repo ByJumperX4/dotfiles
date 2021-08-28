@@ -28,6 +28,12 @@ export EDITOR="emacs" # Emacs is my favorite text editor, some prefers to use an
 export PAGER=less # I use less as pager, it works.
 export MAKEFLAGS='-j20' # I have 24 threads on my dual-xeon setup, adapt to your machine's specs.
 export QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme.
+export TERMINAL=xterm # I use XTerm, let i3 be aware of that
+
+# Options/modes
+
+set -o posix # I want my bash to be posix compliant
+set -o emacs # Emacs is my favourite text editor
 
 #
 # Aliases
