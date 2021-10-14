@@ -1,0 +1,2 @@
+#!/bin/sh
+ffmpeg-mkvtomp3 && ffmpeg-mp4tomp3 && ffmpeg-webmtomp3

@@ -1,0 +1,13 @@
+#!/bin/sh
+# Creates scripts to run flatpak apps automatically
+if [ "$1" = "" ]; then
+   echo "Usage: mkflatpakscript <script name> <flatpak name>"
+else
+ echo "#!/bin/sh" > ~/.local/bin/$1
+if [ "$(flatpak list | grep $2)" = "" ]; then
+echo "Flatpak" \"$2\" "not found !"
+else
+ echo "flatpak run" $2 >> ~/.local/bin/$1
+chmod +x ~/.local/bin/$1
+fi
+fi

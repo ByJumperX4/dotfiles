@@ -1,0 +1,6 @@
+#!/bin/sh
+# Creates scripts automatically
+for f in $@ ; do
+    echo "#!/bin/sh" > $f
+    chmod +x $f
+done
