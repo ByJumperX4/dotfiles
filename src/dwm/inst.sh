@@ -23,6 +23,8 @@ for f in $(ls others-programs); do
     make clean
     echo "Installing "$f
     make install -j $(nproc)
+    echo "Cleaning "$f "source"
+    make clean
     echo "Exiting "$dwmsourcedir/others-programs/$f", going to "$dwmsourcedir
     cd $dwmsourcedir
 done
@@ -34,8 +36,10 @@ cp -v $dwmsourcedir/scripts/* ~/.local/bin/
 # Installing dwm
 
 echo "Building dwm"
-make clean
+make clean all
 echo "Installing dwm"
 make install -j $(nproc)
+echo "Cleaning dwm source"
+make clean
 echo ""
 echo "--- DONE ---"

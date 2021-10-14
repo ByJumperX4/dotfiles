@@ -1,3 +1,10 @@
+
+To install my dwm, run the inst.sh script (will install in ~/.local)
+
+This dwm build is based on 6.2 and already patched (even if there's some patches there, it's just dirty)
+
+-- Start official dwm README (unmodified) --
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
