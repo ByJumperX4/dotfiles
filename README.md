@@ -32,12 +32,12 @@ Screens setup :
 
 1x horizontal 1920x1080 graphics tablet (in front of the middle screen, middle screen is higher so it doesn't mask the screen)
 
-Web browser : GNU IceCat and Tor Browser
+Web browser : Tor Browser
 
-DE/WM : MATE + i3 in floating mode
+DE/WM : dwm (custom build based on 6.2, see src/dwm, binaries are not cleaned up)
 
-Editor : Emacs
+Editor : GNU Emacs
 
 Terminal Emulator : XTerm
 
-Shell : bash
+Shell : bash in POSIX mode

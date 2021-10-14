@@ -16,7 +16,8 @@ fi
 # Prompt
 #
 
-export PS1="\[\033[38;5;10m\]\[\033[48;5;0m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;7m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+#export PS1="\[\033[38;5;10m\]\[\033[48;5;0m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;7m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1='\\$\[$(tput sgr0)\] \w> '
 
 #
 # Variables
@@ -52,8 +53,8 @@ alias l="ls -ahl --color" # Same as above, but instead display one file per line
 
 # Non-categorized aliases
 
-alias vi="emacs" # Replace the vi command with emacs.
-alias dvi="doas emacs" # Set dvi to emacs as root.
+alias vi="emacs-nox" # Replace the vi command with emacs.
+alias dvi="doas emacs-nox" # Set dvi to emacs as root.
 alias clr="clear" # Use "clr" to clear the terminal, this is shorter.
 alias x="exit" # Use "x" to exit, this is shorter.
 alias newtor="doas systemctl restart tor" # Restart tor to get a new tor circuit

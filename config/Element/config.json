@@ -2,7 +2,7 @@
     "settingDefaults": {
         "custom_themes": [
             
-            {
+    {
     "name": "Greenie Dark by @by_jumperx4:kde.org",
     "is_dark": true,
     "colors": {
@@ -22,10 +22,33 @@
         "timeline-text-secondary-color": "#5bff5b",
         "timeline-highlights-color": "#0a1e0a",
         "reaction-row-button-selected-bg-color": "#5b755b"
-    }
-}
-
-        ]
+        }
     },
+
+    {
+    "name": "Cyanie Dark by @by_jumperx4:kde.org",
+    "is_dark": true,
+    "colors": {
+        "accent-color": "#5b7575",
+        "primary-color": "#5bffff",
+        "warning-color": "#b24c4c",
+
+        "sidebar-color": "#111111",
+        "roomlist-background-color": "#001616",
+        "roomlist-text-color": "#00FFFF",
+        "roomlist-text-secondary-color": "#5bffff",
+        "roomlist-highlights-color": "#111111",
+        "roomlist-separator-color": "#001616",
+
+        "timeline-background-color": "#000808",
+        "timeline-text-color": "#00FFFF",
+        "timeline-text-secondary-color": "#5bffff",
+        "timeline-highlights-color": "#111111",
+        "reaction-row-button-selected-bg-color": "#5b7575"
+        }
+     }
+
+    ]
+ },
     "showLabsSettings": true
 }

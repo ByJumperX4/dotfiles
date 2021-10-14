@@ -1,0 +1,79 @@
+4c4
+< static const unsigned int borderpx  = 1;        /* border pixel of windows */
+---
+> static const unsigned int borderpx  = 2;        /* border pixel of windows */
+8,14c8,14
+< static const char *fonts[]          = { "monospace:size=10" };
+< static const char dmenufont[]       = "monospace:size=10";
+< static const char col_gray1[]       = "#222222";
+< static const char col_gray2[]       = "#444444";
+< static const char col_gray3[]       = "#bbbbbb";
+< static const char col_gray4[]       = "#eeeeee";
+< static const char col_cyan[]        = "#005577";
+---
+> static const char *fonts[]          = { "Terminus:size=10" };
+> static const char dmenufont[]       = "Terminus:size=10";
+> static const char col_gray1[]       = "#0a1e0a";
+> static const char col_gray2[]       = "#001600";
+> static const char col_gray3[]       = "#7fff7f";
+> static const char col_gray4[]       = "#0a1e0a";
+> static const char col_cyan[]        = "#7fff7f";
+19d18
+< 	[SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
+30,32c29,30
+< 	/* class      instance    title       tags mask     isfloating   monitor */
+< 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+< 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+---
+> 	/* class          instance    title       tags mask     isfloating   monitor */
+> 	{ "Tor Browser",  NULL,       NULL,       0,            1,           -1 },
+43c41
+< 	{ "><>",      NULL },    /* no layout function means floating behavior */
+---
+> 	//	{ "><>",      NULL },    /* no layout function means floating behavior */
+48c46
+< #define MODKEY Mod1Mask
+---
+> #define MODKEY Mod4Mask
+61c59
+< static const char *termcmd[]  = { "st", NULL };
+---
+> static const char *termcmd[]  = { "xterm", NULL };
+65c63,64
+< 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+---
+> 	{ MODKEY,                       XK_w,      spawn,          {.v = dmenucmd } },
+> 	{ Mod1Mask|ControlMask,         XK_t,      spawn,          {.v = termcmd } },
+68,71c67,70
+< 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
+< 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
+< 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
+< 	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
+---
+>         { MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
+>         { MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
+>         { MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
+>         { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
+73c72
+< 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+---
+> 	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
+78,83c77,81
+< 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+< 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+< 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+< 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+< 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+< 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+---
+> 	{ MODKEY,                       XK_x,      killclient,     {0} },
+> 	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[0]} },
+> 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
+> 	{ MODKEY|ShiftMask,             XK_space,  setlayout,      {0} },
+> 	{ MODKEY,                       XK_space,  togglefloating, {0} },
+90,91c88,89
+< 	{ MODKEY,                       XK_s,      show,           {0} },
+< 	{ MODKEY,                       XK_h,      hide,           {0} },
+---
+>         { MODKEY,                       XK_t,      show,           {0} },
+>         { MODKEY,                       XK_y,      hide,           {0} },

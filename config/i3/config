@@ -130,7 +130,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+a restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'pkill X'"
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'pkill -9 X'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -192,7 +192,7 @@ client.background       #0A1E0A
 
 
 # Hide borders adjacent to screen edges
-hide_edge_borders yes
+#hide_edge_borders yes
 
 # Align title to center
 title_align center
