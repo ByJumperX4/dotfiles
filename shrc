@@ -1,0 +1,133 @@
+#!/bin/sh
+# Please don't use /bin/bash in your scripts, make POSIX shell scripts
+#           __          
+#      ___ / /  ________
+#    _(_-</ _ \/ __/ __/  Made by:
+#   (_)__/_//_/_/  \__/ By_JumperX4
+#                           
+
+# Source global definitions
+
+if [ "$BASH" != "" ]; then
+    set -o posix
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#
+# Prompt
+#
+
+# Set prompt for bash
+
+export PS1='\\$\[$(tput sgr0)\] \w> '
+
+else
+
+# Set prompt for non-bash shells
+
+export PS1=$(
+    printf "$ "
+    if [[ "${PWD#$HOME}" != "$PWD" ]]; then
+      printf "~${PWD#$HOME}"
+    else
+      printf "$PWD"
+    fi
+    printf "› "
+)
+
+# Set prompt at every cd using an alias
+function _cd {
+    cd "$@"
+    PS1=$(
+    printf "\$ "
+    if [[ "${PWD#$HOME}" != "$PWD" ]]; then
+      printf "~${PWD#$HOME}"
+    else
+      printf "$PWD"
+    fi
+    printf "› "
+    )    
+}
+alias cd=_cd
+
+    
+fi # Spaghetti but that's all the bloated GNU Bash deserves
+
+if [ -f /etc/profile ]; then
+    . /etc/profile
+fi   
+
+
+
+#
+# Variables
+#
+
+export PATH="$PATH:$HOME/.local/bin" # Use the system's default path, then add some other places for extra commands.
+export SYSTEMD_PAGER="" # I don't want systemd to open logs in a pager when i'm on a system running systemd.
+export EDITOR="emacs -nw" # Emacs is my favorite text editor, some prefers to use another text editor but I like that one.
+export PAGER=less # I use less as pager, it just works.
+# Autodetect the number of CPU threads that should be used to compile.
+cpunum=$(nproc)
+case "$(nproc)" in
+    1|2)
+	export MAKEFLAGS="-j $cpunum"
+	;;
+    3|4|5)
+	export MAKEFLAGS="-j $((cpunum-1))"
+	;;
+    6|7)
+	export MAKEFLAGS="-j $((cpunum-2))"
+	;;
+    7|8|9|10|11)
+	export MAKEFLAGS="-j $((cpunum-3))"
+	;;
+    *)
+	export MAKEFLAGS="-j $((cpunum-cpunum/8))"
+esac
+export QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme engine.
+export TERMINAL=xterm # I use XTerm, let whatever needs that variable be aware of that.
+
+# Options/modes
+
+# set -o posix # I want my bash to be posix compliant
+set -o emacs # Emacs is my favourite text editor
+
+#
+# Aliases
+#
+
+# Coloration in commands, replace some commands with themselves but with arguments to enable colors
+
+alias ip="ip -c"
+alias grep="grep --color"
+
+# ls related aliases
+
+alias ls="ls -ah --color" # List all the files in an human-readable way with coloration.
+alias l="ls -ahl --color" # Same as above, but instead display one file per line in a detailed way.
+
+
+# Non-categorized aliases
+
+alias vi="emacs -nw" # Replace the vi command with emacs.
+alias dvi="doas emacs -nw" # Set dvi to emacs as root.
+alias clr="clear" # Use "clr" to clear the terminal, this is shorter.
+alias x="exit" # Use "x" to exit, this is shorter.
+alias newtor="doas service tor restart" # Restart tor to get a new tor circuit
+
+#
+# Autostart
+#
+
+# Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others.
+
+if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
+    startx
+fi
+
+# Display a fortune cookie told by a cow
+fortune | cowsay
+
+# End.

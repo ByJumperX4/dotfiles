@@ -40,4 +40,4 @@ Editor : GNU Emacs
 
 Terminal Emulator : XTerm
 
-Shell : bash in POSIX mode
+Shell : AT&T Korn Shell

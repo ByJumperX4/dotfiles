@@ -1,4 +1,5 @@
 #!/bin/sh
+dunst &						 # Notifications daemon
 nitrogen --restore &                             # Wallpaper
 numlockx &                                       # Enable numlock
 firewall-applet &                                # GNU/Linux Firewalld applet
