@@ -6,6 +6,19 @@
 #   (_)__/_//_/_/  \__/ By_JumperX4
 #                           
 
+# Set default path (override everything)
+PATH=/usr/lib64/ccache:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/usr/pkg/bin
+
+# Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others
+if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
+    startx
+# Start tmux if it hasn't already been started
+elif [ "$TMUX" = "" ] && [ "$(whoami)" != "root" ]; then
+    # If you want tmux
+#    tmux new -s $RANDOM && exit
+    &
+fi
+
 # Source global definitions
 
 if [ "$BASH" != "" ]; then
@@ -20,15 +33,15 @@ fi
 
 # Set prompt for bash
 
-export PS1='\\$\[$(tput sgr0)\] \w> '
+PS1='\\$\[$(tput sgr0)\] \w> '
 
 else
 
 # Set prompt for non-bash shells
 
-export PS1=$(
+PS1=$(
     printf "$ "
-    if [[ "${PWD#$HOME}" != "$PWD" ]]; then
+    if [ "${PWD#$HOME}" != "$PWD" ]; then
       printf "~${PWD#$HOME}"
     else
       printf "$PWD"
@@ -49,6 +62,7 @@ function _cd {
     printf "› "
     )    
 }
+
 alias cd=_cd
 
     
@@ -64,13 +78,22 @@ fi
 # Variables
 #
 
-export PATH="$PATH:$HOME/.local/bin" # Use the system's default path, then add some other places for extra commands.
-export SYSTEMD_PAGER="" # I don't want systemd to open logs in a pager when i'm on a system running systemd.
-export EDITOR="emacs -nw" # Emacs is my favorite text editor, some prefers to use another text editor but I like that one.
-export PAGER=less # I use less as pager, it just works.
+PATH="$PATH:$HOME/.local/bin" # Use the system's default path, then add some other places for extra commands.
+SYSTEMD_PAGER="" # I don't want systemd to open logs in a pager when i'm on a system running systemd.
+EDITOR="emacs -nw" # Emacs is my favorite text editor, some prefers to use another text editor but I like that one.
+PAGER=less # I use less as pager, it just works.
 # Autodetect the number of CPU threads that should be used to compile.
+case "$(uname -s)" in
+    FreeBSD|OpenBSD)
+	cpunum=$(sysctl -n hw.ncpu)
+	;;
+    Linux)
+	cpunum=$(nproc)
+	;;
+esac
+	  
 cpunum=$(nproc)
-case "$(nproc)" in
+case "$cpunum" in
     1|2)
 	export MAKEFLAGS="-j $cpunum"
 	;;
@@ -86,13 +109,13 @@ case "$(nproc)" in
     *)
 	export MAKEFLAGS="-j $((cpunum-cpunum/8))"
 esac
-export QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme engine.
-export TERMINAL=xterm # I use XTerm, let whatever needs that variable be aware of that.
+QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme engine.
+TERMINAL=xterm # I use XTerm, let whatever needs that variable be aware of that.
 
 # Options/modes
 
 # set -o posix # I want my bash to be posix compliant
-set -o emacs # Emacs is my favourite text editor
+#set -o emacs # Emacs is my favourite text editor
 
 #
 # Aliases
@@ -109,8 +132,13 @@ alias ls="ls -ah --color" # List all the files in an human-readable way with col
 alias l="ls -ahl --color" # Same as above, but instead display one file per line in a detailed way.
 
 
-# Non-categorized aliases
+# Non-categorized aliases 
 
+alias h="fc -l | grep" # Search in history
+# Execute command number X from history
+function hx {
+    eval $(fc -l | grep \^$@ | sed "s/$@//g")
+    }
 alias vi="emacs -nw" # Replace the vi command with emacs.
 alias dvi="doas emacs -nw" # Set dvi to emacs as root.
 alias clr="clear" # Use "clr" to clear the terminal, this is shorter.
@@ -120,12 +148,6 @@ alias newtor="doas service tor restart" # Restart tor to get a new tor circuit
 #
 # Autostart
 #
-
-# Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others.
-
-if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
-    startx
-fi
 
 # Display a fortune cookie told by a cow
 fortune | cowsay
