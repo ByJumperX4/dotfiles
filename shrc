@@ -92,7 +92,6 @@ case "$(uname -s)" in
 	;;
 esac
 	  
-cpunum=$(nproc)
 case "$cpunum" in
     1|2)
 	export MAKEFLAGS="-j $cpunum"
