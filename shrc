@@ -7,7 +7,7 @@
 #                           
 
 # Set default path (override everything)
-PATH=/usr/lib64/ccache:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin:/usr/pkg/bin
+PATH=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/pkg/bin
 
 # Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others
 if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
