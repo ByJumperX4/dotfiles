@@ -1,2 +1,3 @@
 #!/bin/sh
-/home/byjumperx4/.local/share/tor-browser_fr/Browser/custom-start-tor-browser
+arkenfox-updater -e -u -s -p ~/.mozilla/firefox/$(ls --color=never ~/.mozilla/firefox/ | grep --color=never Privacy | head -n1)
+firefox-esr # --proxy-server="socks5://127.0.0.1:9666" | tor -f $HOME/.tor/torrc
