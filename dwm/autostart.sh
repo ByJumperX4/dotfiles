@@ -11,8 +11,15 @@ keepassxc &                                      # Password manager
 matrixclient &                                   # Matrix client (chat platform)
 
 # Set the date in the status bar
-while true
-do
+while true ;do
     xsetroot -name "$(date +%H:%M:%S\ %d/%m/%Y)" &
     sleep 0.5
-done
+done &
+
+# If it's december, january or february, run xsnow
+
+case "$(date +%m)" in
+    12|1|01|2|02)
+	xsnow -nomenu &
+	;;
+esac
