@@ -120,9 +120,9 @@ alias grep="grep --color"
 alias ls="ls -ah --color" # List all the files in an human-readable way with coloration.
 alias l="ls -ahl --color" # Same as above, but instead display one file per line in a detailed way.
 
-
 # Non-categorized aliases 
 
+alias icat="icat -m 24bit -w 64" # Print an image in the terminal
 alias h="fc -l | grep" # Search in history
 # Execute command number X from history
 function hx {
