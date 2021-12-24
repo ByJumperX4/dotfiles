@@ -155,11 +155,6 @@ function vpn {
 # Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others
 if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
     startx
-# Start tmux if it hasn't already been started
-elif [ "$TMUX" = "" ] && [ "$(whoami)" != "root" ]; then
-    # If you want tmux
-#    tmux new -s $RANDOM && exit
-    &
 fi
 
 
