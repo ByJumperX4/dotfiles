@@ -20,6 +20,10 @@ done &
 
 case "$(date +%m)" in
     12|1|01|2|02)
-	xsnow -nomenu &
+	#xsnow -nomenu &
+	echo xsnow disable
+	
 	;;
 esac
+
+xrandr --output DVI-D-1 --mode 1920x1080 --pos 0x0 --rotate left --output DP-1 --primary --mode 2560x1440 --pos 1080x240 --rotate normal --output DP-2 --mode 1360x768 --pos 3640x912 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1400x1680 --rotate normal --output DP-3 --off

@@ -7,27 +7,13 @@
 #                           
 
 # Set default path (override everything)
-PATH=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/pkg/bin:$HOME/.local/bin
-
-# Source global definitions
-
-if [ "$BASH" != "" ]; then
-    set -o posix
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+PATH=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$HOME/.local/bin
 
 #
 # Prompt
 #
 
-# Set prompt for bash
-
-PS1='\\$\[$(tput sgr0)\] \w> '
-
-else
-
-# Set prompt for non-bash shells
+# Set prompt
 
 PS1=$(
     printf "$ "
@@ -36,7 +22,7 @@ PS1=$(
     else
       printf "$PWD"
     fi
-    printf "› "
+    printf "> "
 )
 
 # Set prompt at every cd using an alias
@@ -49,20 +35,11 @@ function _cd {
     else
       printf "$PWD"
     fi
-    printf "› "
+    printf "> "
     )    
 }
 
 alias cd=_cd
-
-    
-fi # Spaghetti but that's all the bloated GNU Bash deserves
-
-if [ -f /etc/profile ]; then
-    . /etc/profile
-fi   
-
-
 
 #
 # Variables
@@ -99,12 +76,12 @@ case "$cpunum" in
 	export MAKEFLAGS="-j $((cpunum-cpunum/8))"
 esac
 QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme engine.
-TERMINAL=xterm # I use XTerm, let whatever needs that variable be aware of that.
+TERMINAL=xterm-256color # I use XTerm, let whatever needs that variable be aware of that.
 
 # Options/modes
 
-# set -o posix # I want my bash to be posix compliant
-#set -o emacs # Emacs is my favourite text editor
+set -o posix # I want my shell to be posix compliant
+set -o emacs # Emacs is my favourite text editor
 
 #
 # Aliases
@@ -154,7 +131,7 @@ function vpn {
 
 # Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others
 if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
-    startx
+    dbus-launch startx -- -nolisten tcp
 fi
 
 

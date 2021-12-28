@@ -1,44 +1,79 @@
+
+! X11 stuff
 Xcursor.size: 16
 
-XTerm*reverseVideo: false
-
-xterm*ScrollBar: on
-xterm*leftScrollBar: on
-xterm*multiScroll: on
-xterm*jumpScroll: on
-XTerm.vt100.scrollbar.width: 8
-
-XTerm.vt100.utf8: true
-
-XTerm*vt100.translations: #override \
+!
+! XTerm and general apps stuff
+!
+*reverseVideo: false
+*ScrollBar: on
+*leftScrollBar: on
+*multiScroll: on
+*jumpScroll: on
+*vt100.scrollbar.width: 8
+xterm*font: -xos4-terminus-bold-r-normal-*-14-*-72-72-c-80-*-*
+*font: -xos4-terminus-bold-r-normal-*-14-*-72-72-c-80-*-*
+*vt100.utf8: true
+*vt100.translations: #override \
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
     Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
 
 xterm*loginShell: true
 
 xterm*saveLines: 10000000
-
-xterm*Background: rgb:11/11/11
-xterm*Foreground: rgb:e6/ff/ff
-xterm*cursorColor: rgb:7f/ff/ff
 xterm*eightBitInput: false
 
-xterm*color0: rgb:00/16/16
-xterm*color1: rgb:b2/4c/4c
-xterm*color2: rgb:00/ff/4c
-xterm*color3: rgb:b2/ff/4c
-xterm*color4: rgb:00/4c/b2
-xterm*color5: rgb:b2/4c/b2
-xterm*color6: rgb:00/ff/b2
-xterm*color7: rgb:89/d5/d5
+! special
+*foreground: #ffff7f
+*background: #111105
+xterm*foreground: #ffff7f
+xterm*background: #111105
+*cursorColor: #ffff7f
 
-xterm*color8: rgb:5b/75/75
-xterm*color9: rgb:ff/9f/9f
-xterm*color10: rgb:7f/ff/7f
-xterm*color11: rgb:f8/ff/7f
-xterm*color12: rgb:59/9f/ff
-xterm*color13: rgb:d8/a5/d8
-xterm*color14: rgb:7f/ff/ff
-xterm*color15: rgb:c3/eb/eb
+! black
+*color0: #222211
+*color8: #444422
+xterm*color0: #222211
+xterm*color8: #444422
 
+! red
+*color1: #ff2211
+*color9: #ff4422
+xterm*color1: #ff2211
+xterm*color9: #ff4422
 
+! green
+*color2: #22ff11
+*color10: #44ff22
+xterm*color2: #22ff11
+xterm*color10: #44ff22
+
+! yellow
+*color3: #ffff11
+*color11: #ffff22
+xterm*color3: #ffff11
+xterm*color11: #ffff22
+
+! blue
+*color4: #2233ff
+*color12: #4455ff
+xterm*color4: #2233ff
+xterm*color12: #4455ff
+
+! magenta
+*color5: #ff227f
+*color13: #ff447f
+xterm*color5: #ff227f
+xterm*color13: #ff447f
+
+! cyan
+*color6: #22d3d0
+*color14: #44e3f0
+xterm*color6: #22d3d0
+xterm*color14: #44e3f0
+
+! white
+*color7: #bbbb5e
+*color15: #dddd6f
+xterm*color7: #bbbb5e
+xterm*color15: #dddd6f

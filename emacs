@@ -23,7 +23,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Terminus" :foundry "Xos4" :slant normal :weight bold :height 135 :width normal)))))
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
 (xterm-mouse-mode 1)
 (setq x-select-enable-clipboard t)

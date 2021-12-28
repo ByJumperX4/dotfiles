@@ -63,3 +63,5 @@ ShowAttrPoint 0
 ShowBirds 0
 ViewingDistance 40
 BirdsColor #361A07
+BackgroundFile 
+BlackBackground 0

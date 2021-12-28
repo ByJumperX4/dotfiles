@@ -1,0 +1,24 @@
+{
+    "name": "Oldyellow",
+    "is_dark": true,
+    "colors": {
+        "accent-color": "#ffff7f",
+        "primary-color": "#4455ff",
+        "warning-color": "#802211",
+
+        "sidebar-color": "#111105",
+        "roomlist-background-color": "#444422",
+        "roomlist-text-color": "#ffff7f",
+        "roomlist-text-secondary-color": "#bbbb5e",
+        "roomlist-highlights-color": "#222211",
+        "roomlist-separator-color": "#ffff7f",
+
+        "timeline-background-color": "#222211",
+        "timeline-text-color": "#ffff7f",
+        "secondary-content": "#ffff7f",
+        "tertiary-content": "#ffff7f",
+        "timeline-text-secondary-color": "#bbbb5e",
+        "timeline-highlights-color": "#bbbb5e",
+        "reaction-row-button-selected-bg-color": "#bbbb5e"
+    }
+}

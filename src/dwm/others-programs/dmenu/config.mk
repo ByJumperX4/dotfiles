@@ -23,9 +23,10 @@ INCS = -I$(X11INC) -I$(FREETYPEINC)
 LIBS = -L$(X11LIB) -lX11 $(XINERAMALIBS) $(FREETYPELIBS)
 
 # flags
-CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS)
-CFLAGS   = -std=c99 -pedantic -Wall -Os $(INCS) $(CPPFLAGS)
-LDFLAGS  = $(LIBS)
+CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS) -D_FORTIFY_SOURCE=2 -O3 -fPIE -fplt -flto -fstack-protector-all -fvisibility=hidden -fsanitize=cfi -fsanitize=cfi-cast-strict -fcomplete-member-pointers -fsanitize-cfi-cross-dso
+CFLAGS   = -std=c99 -pedantic -Wall -Os $(INCS) $(CPPFLAGS) 
+LDFLAGS  = $(LIBS) -fuse-ld=lld -O3 -fpie -pie -fPIE -fplt -flto -fstack-protector-all -fvisibility=hidden -fuse-ld=gold -Wl,-z,now -fsanitize=safe-stack,cfi,cfi-cast-strict -Wl,--strip-all -fsanitize-cfi-cross-dso
+
 
 # compiler and linker
-CC = cc
+CC = clang

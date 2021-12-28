@@ -9,13 +9,13 @@ static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows sel
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
-static const char *fonts[]          = { "Terminus:size=10" };
-static const char dmenufont[]       = "Terminus:size=10";
-static const char col_gray1[]       = "#111111";
-static const char col_gray2[]       = "#115959";
-static const char col_gray3[]       = "#00FFFF";
-static const char col_gray4[]       = "#111111";
-static const char col_cyan[]        = "#00FFFF";
+static const char *fonts[]          = {"Terminus:size=14:style=Bold"};
+static const char dmenufont[]       = "Terminus:size=14:style=Bold";
+static const char col_gray1[]       = "#111105";
+static const char col_gray2[]       = "#444422";
+static const char col_gray3[]       = "#ffff7f";
+static const char col_gray4[]       = "#111105";
+static const char col_cyan[]        = "#ffff7f";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -62,7 +62,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run_history", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL }; // download dmenu_run_history at https://tools.suckless.org/dmenu/scripts/dmenu_run_with_command_history/
-static const char *termcmd[]  = { "xterm", NULL };
+static const char *termcmd[]  = { "uxterm", NULL };
 static const char *mutesoundcmd[] = { "mutesound", NULL};
 static const char *mutemiccmd[] = { "mutemic", NULL};
 
