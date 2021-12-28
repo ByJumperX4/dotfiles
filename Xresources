@@ -55,10 +55,10 @@ xterm*color3: #ffff11
 xterm*color11: #ffff22
 
 ! blue
-*color4: #2233ff
-*color12: #4455ff
-xterm*color4: #2233ff
-xterm*color12: #4455ff
+*color4: #22557f
+*color12: #44777f
+xterm*color4: #22557f
+xterm*color12: #44777f
 
 ! magenta
 *color5: #ff227f
@@ -67,10 +67,10 @@ xterm*color5: #ff227f
 xterm*color13: #ff447f
 
 ! cyan
-*color6: #22d3d0
-*color14: #44e3f0
-xterm*color6: #22d3d0
-xterm*color14: #44e3f0
+*color6: #22d350
+*color14: #44e370
+xterm*color6: #22d350
+xterm*color14: #44e360
 
 ! white
 *color7: #bbbb5e
