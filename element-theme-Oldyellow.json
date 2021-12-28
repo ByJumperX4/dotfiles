@@ -1,5 +1,5 @@
 {
-    "name": "Oldyellow v1.2",
+    "name": "Oldyellow v1.3",
     "is_dark": true,
     "colors": {
         "accent-color": "#ffff7f",
@@ -11,7 +11,7 @@
         "roomlist-text-color": "#ffff7f",
         "roomlist-text-secondary-color": "#bbbb5e",
         "roomlist-highlights-color": "#222211",
-        "roomlist-separator-color": "#ffff7f",
+        "roomlist-separator-color": "#222211",
 
         "timeline-background-color": "#222211",
         "timeline-text-color": "#ffff7f",
