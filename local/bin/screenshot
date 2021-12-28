@@ -1,2 +1,2 @@
 #!/bin/sh
-scrot -e 'xclip -selection clipboard -t image/png -i $f' -s
+scrot -e 'xclip -selection clipboard -t image/png -i $f ; mv ~/$f ~/Screenshots/' -s "$@"

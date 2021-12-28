@@ -11,8 +11,12 @@ Xcursor.size: 16
 *multiScroll: on
 *jumpScroll: on
 *vt100.scrollbar.width: 8
-xterm*font: -xos4-terminus-bold-r-normal-*-14-*-72-72-c-80-*-*
-*font: -xos4-terminus-bold-r-normal-*-14-*-72-72-c-80-*-*
+!xterm*font: -xos4-terminus-bold-r-normal-*-14-*-*-*-*-*--*
+!*font: -xos4-terminus-bold-r-normal-*-14-*-*-*-*-*-*-*
+xterm*font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-*
+*font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-*
+*utf8: true
+xterm*utf8: true
 *vt100.utf8: true
 *vt100.translations: #override \
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
