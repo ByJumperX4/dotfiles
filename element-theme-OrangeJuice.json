@@ -1,15 +1,15 @@
 {
-    "name": "OrangeJuice v1.1",
+    "name": "OrangeJuice v1.2",
     "is_dark": true,
     "colors": {
         "accent-color": "#ff6600",
 	"accent": "#ff6600",
         "primary-color": "#0066b3",
-        "warning-color": "#803300",
-	"alert": "#803300",
+        "warning-color": "#ff9233",
+	"alert": "#ff9233",
 
-        "sidebar-color": "#394650",
-        "roomlist-background-color": "#28333b",
+        "sidebar-color": "#191f24",
+        "roomlist-background-color": "#394650",
         "roomlist-text-color": "#c9c4b3",
         "roomlist-text-secondary-color": "#191f24",
         "roomlist-highlights-color": "#ff6600",
