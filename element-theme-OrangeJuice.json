@@ -1,10 +1,12 @@
 {
-    "name": "OrangeJuice v1.0",
+    "name": "OrangeJuice v1.1",
     "is_dark": true,
     "colors": {
         "accent-color": "#ff6600",
+	"accent": "#ff6600",
         "primary-color": "#0066b3",
         "warning-color": "#803300",
+	"alert": "#803300",
 
         "sidebar-color": "#394650",
         "roomlist-background-color": "#28333b",
@@ -13,12 +15,13 @@
         "roomlist-highlights-color": "#ff6600",
         "roomlist-separator-color": "#ff6600",
 
-        "timeline-background-color": "#191f24",
+        "timeline-background-color": "#28333b",
         "timeline-text-color": "#c9c4b3",
-        "secondary-content": "#ff6600",
-        "tertiary-content": "#ff6600",
+        "secondary-content": "#28333b",
+        "tertiary-content": "#28333b",
         "timeline-text-secondary-color": "#c9c4b3",
-        "timeline-highlights-color": "#65717f",
+        "timeline-highlights-color": "#28333b",
         "reaction-row-button-selected-bg-color": "#ff6600"
+	"togglesw-off-color": "#191f24"
     }
 }
