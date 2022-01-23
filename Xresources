@@ -5,7 +5,9 @@ Xcursor.size: 16
 !
 ! XTerm and general apps stuff
 !
-*reverseVideo: false
+XTerm*ptyInitialErase: true
+xterm.*backarrowKey: true
+reverseVideo: false
 *ScrollBar: on
 *leftScrollBar: on
 *multiScroll: on
@@ -27,57 +29,68 @@ xterm*loginShell: true
 xterm*saveLines: 10000000
 xterm*eightBitInput: false
 
+!
+! Oldyellow theme
+!
+
 ! special
-*foreground: #ffff7f
-*background: #111105
-xterm*foreground: #ffff7f
-xterm*background: #111105
-*cursorColor: #ffff7f
-
+!*foreground: #ffff7f
+!*background: #111105
+!*cursorColor: #ffff7f
 ! black
-*color0: #222211
-*color8: #444422
-xterm*color0: #222211
-xterm*color8: #444422
-
+!*color0: #222211
+!*color8: #444422
 ! red
-*color1: #ff2211
-*color9: #ff4422
-xterm*color1: #ff2211
-xterm*color9: #ff4422
-
+!*color1: #ff2211
+!*color9: #ff4422
 ! green
-*color2: #22ff11
-*color10: #44ff22
-xterm*color2: #22ff11
-xterm*color10: #44ff22
-
+!*color2: #22ff11
+!*color10: #44ff22
 ! yellow
-*color3: #ffff11
-*color11: #ffff22
-xterm*color3: #ffff11
-xterm*color11: #ffff22
-
+!*color3: #ffff11
+!*color11: #ffff22
 ! blue
-*color4: #22557f
-*color12: #44777f
-xterm*color4: #22557f
-xterm*color12: #44777f
-
+!*color4: #22557f
+!*color12: #44777f
 ! magenta
-*color5: #ff227f
-*color13: #ff447f
-xterm*color5: #ff227f
-xterm*color13: #ff447f
-
+!*color5: #ff227f
+!*color13: #ff447f
 ! cyan
-*color6: #22d350
-*color14: #44e370
-xterm*color6: #22d350
-xterm*color14: #44e360
-
+!*color6: #22d350
+!*color14: #44e370
 ! white
-*color7: #bbbb5e
-*color15: #dddd6f
-xterm*color7: #bbbb5e
-xterm*color15: #dddd6f
+!*color7: #bbbb5e
+!*color15: #dddd6f
+
+!
+! OrangeJuice theme
+!
+
+! special
+*foreground: #c9c4b3
+*background: #191f24
+*cursorColor: #c9c4b3
+! black
+*color0: #100500
+*color8: #a09080
+! red
+*color1: #803300
+*color9: #ff9233
+! green
+*color2: #338000
+*color10: #66ff00
+! yellow
+*color3: #806600
+*color11: #ffb300
+! blue
+*color4: #003366
+*color12: #0066b3
+! magenta
+*color5: #803366
+*color13: #ff66b3
+! cyan
+*color6: #338066
+*color14: #66ffb3
+! white
+*color7: #c9c4b3
+*color15: #fff2e0

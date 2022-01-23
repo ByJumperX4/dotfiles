@@ -15,8 +15,8 @@ $dark_fg_color: #ffff7f;
 $dark_bg_color_trans: fade-out(#222211, 1 - (1.0 / 2));
 
 // used to calculate gradients for gradient values > 0
-$lighten_amount: 1 + (0.05 / 2);
-$darken_amount: 1 - (0.05 / 2);
+$lighten_amount: 1 + (0.01 / 2);
+$darken_amount: 1 - (0.01 / 2);
 
 // main background surface gradient start and end colors
 $light_bg_grad: if($lighten_amount > 1, lighten($dark_bg_color, ($lighten_amount - 1) * lightness($dark_bg_color)), $dark_bg_color);
@@ -79,6 +79,6 @@ $info_bg_color: #5666de;
 $roundness: 0px;
 
 // used for buttons, entrys, panel spacing, and menu item spacing.
-$spacing: 0px;
-$spacing_plus2: (0 + 2) + px;
+$spacing: 1px;
+$spacing_plus2: (1 + 2) + px;
 

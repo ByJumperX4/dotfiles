@@ -7,7 +7,7 @@
 #                           
 
 # Set default path (override everything)
-PATH=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$HOME/.local/bin
+PATH=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/games:/usr/local/games:$HOME/.local/bin:$HOME/go/bin
 
 #
 # Prompt
