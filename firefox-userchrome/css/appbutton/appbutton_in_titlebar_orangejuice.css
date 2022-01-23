@@ -1,0 +1,17 @@
+/* Firefox userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/* OrangeJuice */
+#main-window[tabsintitlebar] #PanelUI-button #PanelUI-menu-button {
+  background-image: linear-gradient(hsl(24,100%,50%), hsl(24,90%,23%) 95%) !important;
+}
+#main-window[tabsintitlebar] #PanelUI-button #PanelUI-menu-button:hover:not(:active):not([open]){
+  background-image: radial-gradient(farthest-side at center bottom, hsla(24,100%,50%,.5) 10%, hsla(24,100%,35%,0) 70%),
+					radial-gradient(farthest-side at center bottom, hsla(24,100%,35%,.7), hsla(24,100%,50%,0)),
+					linear-gradient(hsl(24,98%,34%), hsl(24,87%,20%) 95%) !important;
+}
+#main-window[tabsintitlebar] #PanelUI-button #PanelUI-menu-button:is(:hover:active,[open]) {
+  background-image: linear-gradient(hsl(24,95%,30%), hsl(24,85%,17%) 95%) !important;
+}
