@@ -99,32 +99,12 @@ alias l="ls -ahl --color" # Same as above, but instead display one file per line
 
 # Non-categorized aliases 
 
-alias icat="icat -m 24bit -w 64" # Print an image in the terminal
 alias h="fc -l | grep" # Search in history
 # Execute command number X from history
-function hx {
-    eval $(fc -l | grep \^$@ | sed "s/$@//g")
-    }
 alias vi="emacs -nw" # Replace the vi command with emacs.
 alias dvi="doas emacs -nw" # Set dvi to emacs as root.
 alias clr="clear" # Use "clr" to clear the terminal, this is shorter.
 alias x="exit" # Use "x" to exit, this is shorter.
-alias newtor="doas service tor restart" # Restart tor to get a new tor circuit
-# Lokinet "VPN" mode
-function vpn {
-    case "$1" in
-	up|on)
-	    lokinet-vpn --exit exit.loki --up
-	    ;;
-	down|off)
-	    lokinet-vpn --down
-	    ;;
-	status)
-	    lokinet-vpn --status
-	    ;;
-    esac
-    }
-
 #
 # Autostart
 #

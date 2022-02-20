@@ -8,7 +8,7 @@ freenet start &                                  # Start Freenet
 seapplet &                                       # SELinux alerts applet, if present
 pasystray -N sink_default -N source_default &    # Sound applet with notifications when something is changed 
 dbus-launch keepassxc &                          # Password manager
-dbus-launch matrixclient &                       # Matrix client (chat platform)
+dbus-launch matrixclient --hidden &                       # Matrix client (chat platform)
 
 # Set the date in the status bar
 while true ;do

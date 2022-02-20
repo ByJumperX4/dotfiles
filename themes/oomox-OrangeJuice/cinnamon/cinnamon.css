@@ -233,7 +233,7 @@ stage {
   font-size: 1em; }
 
 .cinnamon-link {
-  color: #003366;
+  color: #0052a5;
   font-style: italic; }
   .cinnamon-link:hover {
     color: #191f24; }
@@ -858,7 +858,7 @@ StScrollView StScrollBar {
   #notification StEntry:focus {
     border: 1px solid #db600e; }
   #notification .url-highlighter {
-    link-color: #003366; }
+    link-color: #0052a5; }
 
 .notification-with-image {
   min-height: 159px;

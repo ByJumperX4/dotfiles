@@ -26,7 +26,7 @@
 @define-color question_bg_color #0066b3;
 @define-color error_fg_color #191f24;
 @define-color error_bg_color #ff9233;
-@define-color link_color #003366;
+@define-color link_color #0052a5;
 @define-color success_color #66ff00;
 @define-color warning_color #ffb300;
 @define-color error_color #ff9233;
@@ -92,10 +92,10 @@ GeditViewFrame .gedit-search-slider .not-found:selected, .gedit-document-panel-d
 
 * {
   /* hyperlinks */
-  -GtkHTML-link-color: #003366;
-  -GtkIMHtml-hyperlink-color: #003366;
-  -GtkWidget-link-color: #003366;
-  -GtkWidget-visited-link-color: #003366; }
+  -GtkHTML-link-color: #0052a5;
+  -GtkIMHtml-hyperlink-color: #0052a5;
+  -GtkWidget-link-color: #0052a5;
+  -GtkWidget-visited-link-color: #0052a5; }
   *:insensitive, *:insensitive:insensitive {
     color: mix(#c9c4b3,#28333b,0.5); }
   *:insensitive {
@@ -103,7 +103,7 @@ GeditViewFrame .gedit-search-slider .not-found:selected, .gedit-document-panel-d
   *:hover {
     -gtk-image-effect: highlight; }
   *:link, *:visited {
-    color: #003366; }
+    color: #0052a5; }
 
 .background {
   background-color: #28333b;

@@ -3,40 +3,48 @@ columns = title,~#length,~rating
 	
 default_rating = 0.0
 ratings = 1
-scan = /home/byjumperx4/Musique/mp3
+scan = /home/byjumperx4/Music/mp3
 
 [memory]
 browser = SearchBar
-chooser_dir = /home/byjumperx4/Musique
+chooser_dir = /home/byjumperx4/Music
 column_expands = title,1
 	
 column_widths = title,-1
 	
 open_browsers = 
 plugin_prefs_maximized = 0
-plugin_prefs_position = 1949 1986
-plugin_prefs_size_ = 750 500
-plugin_selection = WaveformSeekBar
-prefs_page = tagging
+plugin_prefs_position = 1080 260
+plugin_prefs_size_ = 1276 1416
+plugin_selection = Change Language
+prefs_page = library
 queue_disable = False
 queue_expanded = False
+quodlibet_information_maximized = 0
+quodlibet_information_position = 1083 427
+quodlibet_information_size_ = 548 520
 quodlibet_last_active_version = 4.4.0
 quodlibet_maximized = 0
-quodlibet_position = 1365 1720
-quodlibet_size_ = 1920 1063
+quodlibet_position = 1400 1700
+quodlibet_properties_maximized = 0
+quodlibet_properties_pos = 0.4003067484662577
+quodlibet_properties_position = 952 498
+quodlibet_properties_size_single = 652 400
+quodlibet_size_ = 956 1056
 repeat = False
 seek = 0
 shuffle = True
 shuffle_mode = weighted
 sidebar_pos = 0.25
-song = /home/byjumperx4/Musique/mp3/AC_DC - Moneytalks (Official HD Video)-2lqdErI9uss.mp3
-sortby = 
+song = /home/byjumperx4/Music/mp3/AC_DC - Are You Ready (Official HD Video)-CIhylLW4Fcs.mp3
+sortby = 0title
 	
-volume = 0.3580322265625
+volume = 1.0
 
 [player]
 gst_buffer = 3.0
-is_playing = True
+gst_disable_gapless = false
+is_playing = False
 replaygain = true
 replaygain_mode = auto
 
@@ -46,6 +54,7 @@ collectionbrowser_pos = 0.4
 covergrid_pos = 0.4004282655246253
 filesystem_pos = 0.4
 internetradio_pos = 0.4
+multiple_queries = false
 pane_selection = 0	.
 	0	.
 panedbrowser_pane_widths = 0.503125
@@ -58,12 +67,26 @@ version = 0
 
 [plugins]
 active_plugins = WaveformSeekBar
-	SeekBar
+	Tray Icon
+cover_engine_amazon = True
+cover_engine_discogs = True
+icon_tooltip = <album|<album~discnumber~part~tracknumber~title~version>|<artist~title~version>>
+quodlibet.fake.plugins.waveformseekbar_elapsed_color = #ff6600
+quodlibet.fake.plugins.waveformseekbar_remaining_color = #394650
 quodlibet.fake.plugins.waveformseekbar_show_current_pos = True
+quodlibet.fake.plugins.waveformseekbar_show_time_labels = True
+scrobbler_service = Last.fm
+squeezebox_debug = False
 
 [editing]
 save_to_songs = false
 
 [song_list]
 auto_sort = true
+
+[display]
+duration_format = text-full
+
+[rename]
+windows = true
 

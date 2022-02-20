@@ -52,6 +52,7 @@ AttrFactor 100
 BirdsOnly 0
 BirdsRestart 0
 BirdsScale 100
+AttrSpace 40
 BirdsSpeed 100
 DisWeight 20
 FollowWeight 30

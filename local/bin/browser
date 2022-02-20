@@ -1,3 +1,2 @@
 #!/bin/sh
-arkenfox-updater -e -u -s -p ~/.mozilla/firefox/$(ls --color=never ~/.mozilla/firefox/ | grep --color=never Privacy | head -n1)
-firefox-esr "$@"
+firefox-privacy-17397
