@@ -25,12 +25,12 @@ quodlibet_information_position = 1083 427
 quodlibet_information_size_ = 548 520
 quodlibet_last_active_version = 4.4.0
 quodlibet_maximized = 0
-quodlibet_position = 1400 1700
+quodlibet_position = -3840 1700
 quodlibet_properties_maximized = 0
 quodlibet_properties_pos = 0.4003067484662577
 quodlibet_properties_position = 952 498
 quodlibet_properties_size_single = 652 400
-quodlibet_size_ = 956 1056
+quodlibet_size_ = 1916 1056
 repeat = False
 seek = 0
 shuffle = True
@@ -39,7 +39,7 @@ sidebar_pos = 0.25
 song = /home/byjumperx4/Music/mp3/AC_DC - Are You Ready (Official HD Video)-CIhylLW4Fcs.mp3
 sortby = 0title
 	
-volume = 1.0
+volume = 0.5280914306640625
 
 [player]
 gst_buffer = 3.0

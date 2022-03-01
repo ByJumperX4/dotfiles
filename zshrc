@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 #
 # System stuff
 #
