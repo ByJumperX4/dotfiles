@@ -11,12 +11,12 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const char *fonts[]          = {"Terminus:size=14:style=Bold"};
 static const char dmenufont[]       = "Terminus:size=14:style=Bold";
-static const char col_norm_fg[]     = "#c9c4b3";
-static const char col_norm_bg[]     = "#191f24";
-static const char col_norm_border[] = "#685c53";
-static const char col_sel_fg[]      = "#191f24";
-static const char col_sel_bg[]      = "#ff6600";
-static const char col_sel_border[]  = "#ff6600";
+static const char col_norm_fg[]     = "#ff3333";
+static const char col_norm_bg[]     = "#000000";
+static const char col_norm_border[] = "#333333";
+static const char col_sel_fg[]      = "#000000";
+static const char col_sel_bg[]      = "#ff0000";
+static const char col_sel_border[]  = "#ff0000";
 static const char *colors[][3]      = {
 	/*               fg           bg           border       */
 	[SchemeNorm] = { col_norm_fg, col_norm_bg, col_norm_border },
@@ -42,8 +42,8 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-        { "[Grid]",      grid }, /* first entry is default */
-        { "[Tile]",      tile },    
+        { "[Tile]",      tile }, /* first entry is default */
+	{ "[Grid]",      grid },
 	//	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[Full]",      monocle },
 };
@@ -79,8 +79,8 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_u,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_p,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },

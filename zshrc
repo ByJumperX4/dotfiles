@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+
 #
 # System stuff
 #
@@ -21,9 +22,9 @@ fi
 # Set prompt
 
 if ! [ $(whoami) = "root" ]; then
-    PROMPT="%B%F{cyan}$ %f%b%B%F{green}%~%f%b%F{green}> %f"
+    PROMPT="%B%F{yellow}$ %f%b%B%F{red}%~%f%b%F{red}> %f"
 else
-    PROMPT="%B%F{red}# %f%b%B%F{green}%~%f%b%F{green}> %f"
+    PROMPT="%F{red}# %f%b%B%F{red}%~%f%b%F{red}> %f"
 fi
     RPROMPT="%B%F{red}[%f%b%B%F{yellow}%?%f%b%B%F{red}]%f%b"
 

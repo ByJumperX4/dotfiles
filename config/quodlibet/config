@@ -14,9 +14,9 @@ column_widths = title,-1
 	
 open_browsers = 
 plugin_prefs_maximized = 0
-plugin_prefs_position = 1080 260
-plugin_prefs_size_ = 1276 1416
-plugin_selection = Change Language
+plugin_prefs_position = 1400 1700
+plugin_prefs_size_ = 956 1056
+plugin_selection = WaveformSeekBar
 prefs_page = library
 queue_disable = False
 queue_expanded = False
@@ -25,21 +25,22 @@ quodlibet_information_position = 1083 427
 quodlibet_information_size_ = 548 520
 quodlibet_last_active_version = 4.4.0
 quodlibet_maximized = 0
-quodlibet_position = -3840 1700
+quodlibet_position = -1728 1700
 quodlibet_properties_maximized = 0
 quodlibet_properties_pos = 0.4003067484662577
 quodlibet_properties_position = 952 498
 quodlibet_properties_size_single = 652 400
-quodlibet_size_ = 1916 1056
-repeat = False
-seek = 0
+quodlibet_size_ = 860 1056
+repeat = True
+repeat_mode = repeat_all
+seek = 2838
 shuffle = True
 shuffle_mode = weighted
 sidebar_pos = 0.25
-song = /home/byjumperx4/Music/mp3/AC_DC - Are You Ready (Official HD Video)-CIhylLW4Fcs.mp3
+song = /home/byjumperx4/Music/mp3/T.N.T.-NhsK5WExrnE.mp3
 sortby = 0title
 	
-volume = 0.5280914306640625
+volume = 0.674163818359375
 
 [player]
 gst_buffer = 3.0
@@ -61,6 +62,7 @@ panedbrowser_pane_widths = 0.503125
 panedbrowser_pos = 0.08165548098434004
 playlistsbrowser_pos = 0.4
 query_text = 
+search_limit = false
 
 [__config__]
 version = 0
@@ -71,8 +73,8 @@ active_plugins = WaveformSeekBar
 cover_engine_amazon = True
 cover_engine_discogs = True
 icon_tooltip = <album|<album~discnumber~part~tracknumber~title~version>|<artist~title~version>>
-quodlibet.fake.plugins.waveformseekbar_elapsed_color = #ff6600
-quodlibet.fake.plugins.waveformseekbar_remaining_color = #394650
+quodlibet.fake.plugins.waveformseekbar_elapsed_color = #ff0000
+quodlibet.fake.plugins.waveformseekbar_remaining_color = #000000
 quodlibet.fake.plugins.waveformseekbar_show_current_pos = True
 quodlibet.fake.plugins.waveformseekbar_show_time_labels = True
 scrobbler_service = Last.fm

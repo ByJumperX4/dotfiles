@@ -67,30 +67,63 @@ xterm*eightBitInput: false
 !
 
 ! special
-*foreground: #c9c4b3
-*background: #191f24
-*cursorColor: #c9c4b3
+!*foreground: #c9c4b3
+!*background: #191f24
+!*cursorColor: #c9c4b3
 ! black
-*color0: #100500
-*color8: #a09080
+!*color0: #100500
+!*color8: #a09080
 ! red
-*color1: #803300
-*color9: #ff9233
+!*color1: #803300
+!*color9: #ff9233
 ! green
-*color2: #338000
-*color10: #66ff00
+!*color2: #338000
+!*color10: #66ff00
 ! yellow
-*color3: #806600
-*color11: #ffb300
+!*color3: #806600
+!*color11: #ffb300
 ! blue
-*color4: #003366
-*color12: #0066b3
+!*color4: #003366
+!*color12: #0066b3
 ! magenta
-*color5: #803366
-*color13: #ff66b3
+!*color5: #803366
+!*color13: #ff66b3
 ! cyan
-*color6: #338066
-*color14: #66ffb3
+!*color6: #338066
+!*color14: #66ffb3
 ! white
-*color7: #c9c4b3
-*color15: #fff2e0
+!*color7: #c9c4b3
+!*color15: #fff2e0
+
+!
+! Libcom theme
+!
+
+! special
+*foreground: #ffd4d4
+*background: #000000
+*cursorColor: #ff1111
+! black
+*color0: #333333
+*color8: #7f7f7f
+! red
+*color1: #ff0000
+*color9: #ff6666
+! green
+*color2: #7f9900
+*color10: #99b366
+! yellow
+*color3: #ff9900
+*color11: #ffb366
+! blue
+*color4: #33007f
+*color12: #7f6699
+! magenta
+*color5: #ff007f
+*color13: #ff6699
+! cyan
+*color6: #7f7fff
+*color14: #9f9fff
+! white
+*color7: #999999
+*color15: #ffffff
