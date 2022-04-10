@@ -9,9 +9,7 @@ dbus-launch matrixclient &                       # My favourite matrix client (I
 xmullvad &                                       # Mullvad VPN GUI app
 
 # Set the date in the status bar
-while true; do
-    sleep 0.5 && xsetroot -name "$(date +%H:%M:%S\ %d/%m/%Y)" &
-done &
+watch -n1 'xsetroot -name "$(date +%H:%M:%S\ %d/%m/%Y)"' &>/dev/null &
 
 # If it's december, january or february, run xsnow
 

@@ -43,11 +43,36 @@ fi
 if [ "$(echo $PATH | grep '\.cargo/bin')" = "" ] ; then
     PATH=$PATH:$HOME/.cargo/bin
 fi
+if [ -d /usr/lib/jvm ]; then
+    for f in $(ls /usr/lib/jvm); do
+	PATH=$PATH:/usr/lib/jvm/$f/bin
+    done
+fi
+
+EDITOR="" # Define the text editor (first clear anything)
+if [ $(command -v emacs) ]; then # (detect the text editor to use)
+    EDITOR="emacs -nw"
+elif [ $(command -v mg) ]; then
+    EDITOR="mg"
+elif [ $(command -v micro) ]; then
+    EDITOR="micro"
+elif [ $(command -v edit) ]; then
+    EDITOR="edit"
+elif [ $(command -v nvi) ]; then
+    EDITOR="nvi"
+elif [ $(command -v neovim) ]; then
+    EDITOR="neovim"
+elif [ $(command -v vim) ]; then
+    EDITOR="vim"
+elif [ $(command -v nano) ]; then
+    EDITOR="nano"
+elif [ $(command -v vi) ]; then
+    EDITOR="vi"
+fi
 
 HISTFILE=$HOME/.histfile # History file
 HISTSIZE=1000 # History file size
 SAVEHIST=1000 # Number of lines to save
-EDITOR=e # Script that should be in ~/.local/bin.
 PAGER=less # I use less as pager, it just works.
 QT_QPA_PLATFORMTHEME=qt5ct # QT5 Theme engine.
 TERMINAL=xterm-256color # I use XTerm, let whatever needs that variable be aware of that.
@@ -76,9 +101,6 @@ case "$cpunum" in
     *)
 	MAKEFLAGS="-j $((cpunum-cpunum/8))"
 esac
-
-# Colors
-eval "$(dircolors -b)"
 
 # Export variables
 
