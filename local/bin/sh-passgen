@@ -1,5 +1,5 @@
 #!/bin/sh
-echo $(head -n $(echo $RANDOM | rev | cut -c 4- | rev) /dev/urandom | sort -i | tr -cd '\11\12\15\40-\176' | awk -v n=90 -v p=3 '
+echo $(head -n $(echo $RANDOM | rev) /dev/urandom | sort -i | tr -cd '\11\12\15\40-\176' | awk -v n=90 -v p=3 '
   BEGIN {srand()}
   rand() * n-- < p {p--; next}
   {print}' | cut -c-$(echo $RANDOM | rev | cut -c 3- | rev) | tail -n1 ) $(head -n1 /dev/random | tr -cd '\11\12\15\40-\176') | tr -d " \t\n\r"

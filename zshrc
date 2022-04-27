@@ -9,9 +9,9 @@
 if [ -f /etc/profile ] ; then
     source /etc/profile # System-wide defaults
 fi
-if [ -f $HOME/.profile ] ; then
-    source $HOME/.profile # User-defined defaults
-fi
+#if [ -f $HOME/.profile ] ; then
+#    source $HOME/.profile # User-defined defaults
+#fi
 
 # Auto-adjust zsh configuration depending on detected stuff
 
@@ -102,6 +102,20 @@ case "$cpunum" in
 	MAKEFLAGS="-j $((cpunum-cpunum/8))"
 esac
 
+if [ ! $RUNAS_PRIVCMD = ""]; then
+echo Warning: custom command used to gain privileges !
+elif [ $(command -v doas) ] ; then
+PRIVCMD="doas"
+alias sudo=$PRIVCMD
+elif [ $(command -v sudo) ] ; then
+PRIVCMD="sudo"
+alias doas=$PRIVCMD
+elif [ $(command -v su) ] ; then
+PRIVCMD="su -c"
+alias sudo=$PRIVCMD
+alias doas=$PRIVCMD
+fi
+
 # Export variables
 
 export EDITOR
@@ -165,15 +179,16 @@ bindkey '^[[6~' history-beginning-search-forward        # Page down key
 
 # Replacements
 
-alias ls="ls -ah --color=auto"      # ls with color, all files displayed and human readable output
+alias ls="ls -ah --color"      # ls with color, all files displayed and human readable output
 
 # Shortcuts
 
 alias e="$EDITOR"       # 'e' becomes a link to the editor
-alias de="doas $EDITOR" # 'de' runs the editor as root using doas
+alias de="$PRIVCMD $EDITOR" # 'de' runs the editor as root using doas
 alias x="exit"          # 'x' exits the shell
 alias clr="clear"       # 'clr' clears the buffer
 alias l="ls -l"         # 'l' lists in long listing format
+alias fuck=$PRIVCMD "\$(history | tail -n1 | cut -d' ' -f4)"  # I forgor to run as root again
 
 #
 # Autostart
@@ -182,9 +197,8 @@ alias l="ls -l"         # 'l' lists in long listing format
 # Run X11 if in the first TTY. Supports GNU/Linux, FreeBSD and OpenBSD. Not tested on others
 
 if [ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" =  "/dev/ttyv0" ] || [ "$(tty)" = "/dev/ttyC0" ]; then
-    dbus-launch startx -- -nolisten tcp
+    dbus-run-session startx -- -nolisten tcp
 fi
-
 
 # Display a fortune cookie told by a cow
 

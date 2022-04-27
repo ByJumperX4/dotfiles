@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ ! -f ~/.vol_mic ]; then
+ touch ~/.vol_mic
+fi
+if [ ! "$(mixer mic | rev | cut -d" " -f1 | rev)" = "0:0" ]; then
+ mixer mic | rev | cut -d" " -f1 | rev > ~/.vol_mic &&
+ mixer mic 0 && notify-send Microphone "disabled"
+else
+ mixer mic $(cat ~/.vol_mic) && notify-send Microphone "enabled: $(mixer mic | rev | cut -d" " -f1 | rev)"
+fi

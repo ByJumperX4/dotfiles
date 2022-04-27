@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ ! -f ~/.vol_sound ]; then
+ touch ~/.vol_sound
+fi
+if [ ! "$(mixer vol | rev | cut -d" " -f1 | rev)" = "0:0" ]; then
+ mixer vol | rev | cut -d" " -f1 | rev > ~/.vol_sound &&
+ mixer vol 0 && notify-send "Sound output" "disabled"
+else
+ mixer vol $(cat ~/.vol_sound) && notify-send "Sound output" "enabled: $(mixer vol | rev | cut -d" " -f1 | rev)"
+fi

@@ -1,2 +1,5 @@
 #!/bin/sh
-firefox-privacy-17397
+xhost + inet:10.0.0.1
+jail_hostname=browser
+jail_id=$(jls -h jid host.hostname | grep $jail_hostname | cut -w -f 1)
+jailme $jail_id firefox $@
